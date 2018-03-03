@@ -1,0 +1,123 @@
+<resources>
+    <string name="app_name">My Courses</string>
+    <string name="title_activity_centers">Centers</string>
+
+    <string name="dialog_play_services_unavailable">Google Play Services are unavailable.</string>
+    <string name="dialog_download_play_services">Download Play Services</string>
+    <string name="dialog_close_program">Close Program</string>
+    <!--    Permissions    -->
+    <string name="permission_rationale_location">Access to the location service is required to demonstrate the \'my location\' feature, which shows your current location on the map.</string>
+    <string name="location_permission_denied">This sample requires location permission to enable the \'my location\' layer. Please try again and grant access to use the location.\nIf the permission has been permanently denied, it can be enabled from the System Settings &gt; Apps &gt; \'Google Maps API Demos\'.</string>
+    <string name="permission_required_toast">Location permission is required for this demo.</string>
+
+    <!-- Social Login -->
+    <string name="facebook_app_id">2038579076385900</string>
+    <string name="fb_login_protocol_scheme">fb2038579076385900</string>
+
+    <string name="com.twitter.sdk.android.CONSUMER_KEY">vf0zpRD0apGzKvDUg5GZa7FYK</string>
+    <string name="com.twitter.sdk.android.CONSUMER_SECRET">r8SfYDSVb1D8CUDA922kmHZuFswpt5R9Cv8TEqWXCb1Dc80b7m</string>
+
+    <string name="server_client_id">1012881778632-o9j8qa0bb5m0cngpakp1vn88jot6noai.apps.googleusercontent.com</string>
+    <string name="google_client_secret">-phNP9PFsmtWvqClOldVVLD8</string>
+
+    <string name="change_lang">Are you sure you want change app language ?</string>
+
+    <!-- General -->
+    <string name="save">Save</string>
+    <string name="modify">Modify</string>
+    <string name="percentage">Percentage</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+    <string name="all">All</string>
+    <string name="name">Name</string>
+    <string name="email">E-mail</string>
+    <string name="password">Password</string>
+    <string name="dob">Date of Birth</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="logout">Logout</string>
+    <string name="home">Home</string>
+    <string name="settings">Settings</string>
+    <string name="follow_us">Follow</string>
+    <string name="lang">Language</string>
+    <string name="back">Back</string>
+    <string name="privacy">Privacy Policy</string>
+    <string name="terms">Terms of Service</string>
+    <string name="app_ver">Application Version</string>
+
+
+    <string name="centers">Centers</string>
+    <string name="courses">Courses</string>
+    <string name="bookings">Bookings</string>
+    <string name="center">Center: </string>
+    <string name="course">Course</string>
+    <string name="address">Address</string>
+    <string name="info">Info</string>
+    <string name="promo_code2">Promo Code:</string>
+    <string name="receive_notifs">Receive Notifications</string>
+    <string name="comp_reg">Complete Registration</string>
+    <string name="promotions">Promotions</string>
+
+    <!-- Home -->
+    <string name="find_course">Search</string>
+    <string name="recommended">Recommended \nCourses</string>
+    <string name="discover">Discover \nCourses</string>
+    <string name="languages">Languages \nCourses</string>
+    <string name="human_development">Human Development \nCourses</string>
+    <string name="near">Near \nCenters</string>
+
+    <!-- Titles -->
+    <string name="recommended2">Recommended Courses</string>
+    <string name="discover2">Discover Courses</string>
+    <string name="languages2">Languages Courses</string>
+    <string name="human_development2">Human Development Courses</string>
+    <string name="near2">Near Centers</string>
+
+    <!-- Side Menu -->
+    <string name="my_bookings">My Bookings</string>
+    <string name="certificates">Certificates</string>
+    <string name="promo_code">Promo Code</string>
+    <string name="invite">Invite Friends</string>
+    <string name="contact">Contact Us</string>
+
+    <!-- Course Profile -->
+    <string name="instructor">Instructor: </string>
+    <string name="starting_at">Starting at: </string>
+    <string name="starting_date">Starting Date: </string>
+    <string name="fees">Fees: </string>
+    <string name="rate">Rate: </string>
+
+    <!-- Book Course -->
+    <string name="book">Book</string>
+    <string name="select_starting_date">Select Start Date: </string>
+    <string name="course_starting_date">Course Starting Date</string>
+    <string name="choose_promo_code_apply">Choose promo code and apply</string>
+    <string name="discount">Discount: </string>
+    <string name="final_fees">Final Fees: </string>
+    <string name="book_now">Book Now</string>
+    <string name="call_center">Call Center</string>
+
+    <!-- Add Certificate -->
+    <string name="add_cer">Add Certificate</string>
+    <string name="cer_name">Certificate Name</string>
+    <string name="cer_link">Certificate Link</string>
+
+    <!-- Filter -->
+    <string name="filter_courses">Filter Courses</string>
+    <string name="fees_lh">Fees: Low to High</string>
+    <string name="fees_hl">Fees: High to Low</string>
+    <string name="rate_lh">Rate: Low to High</string>
+    <string name="rate_hl">Rate: High to Low</string>
+
+    <!-- Complete Profile -->
+    <string name="mobile_no">Mobile No.</string>
+    <string name="university_school">University / School Name</string>
+    <string name="dep_major">Department / Major</string>
+    <string name="fields_of_study">Fields of Study</string>
+
+    <string-array name="languages">
+        <item>@string/modify</item>
+        <item>English</item>
+        <item>العربية</item>
+    </string-array>
+</resources>

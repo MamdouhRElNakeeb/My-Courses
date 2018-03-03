@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout android:id="@+id/drawerLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:map="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+       <!--<include-->
+           <!--layout="@layout/toolbar"/>-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark">
+
+            <com.mancj.materialsearchbar.MaterialSearchBar
+                android:padding="10dp"
+                app:mt_speechMode="false"
+                app:mt_maxSuggestionsCount="3"
+                map:mt_placeholder="@string/find_course"
+                app:mt_hint="@string/find_course"
+                app:mt_hintColor="@color/grey_dark"
+                app:mt_textColor="@color/grey_dark"
+                app:mt_navIconEnabled="true"
+                app:mt_placeholderColor="@color/grey_dark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/searchBar" />
+
+        </LinearLayout>
+
+        <android.support.v7.widget.Toolbar
+            android:visibility="gone"
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            map:titleTextColor="@android:color/white"
+            map:subtitleTextColor="@android:color/white"
+            android:background="@color/colorPrimaryDark"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:map="http://schemas.android.com/apk/res-auto">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="start"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/toolbarIB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/side_menu_icn"
+                        android:paddingTop="9dp"
+                        android:paddingBottom="9dp"
+                        android:scaleType="fitCenter"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:background="@android:color/transparent"/>
+
+                    <EditText
+                        android:id="@+id/searchCourseET"
+                        android:layout_width="0dp"
+                        android:layout_weight="6"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:text=""
+                        android:textSize="20sp"
+                        android:hint="Search in courses"
+                        android:backgroundTint="@android:color/white"
+                        android:textColor="@android:color/white"/>
+
+                    <ImageButton
+                        android:id="@+id/searchIB"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/search_icn"
+                        android:paddingTop="9dp"
+                        android:paddingBottom="9dp"
+                        android:scaleType="fitCenter"
+                        android:alpha="0.4"
+                        android:background="@android:color/transparent"/>
+                </LinearLayout>
+
+                <!--<include-->
+                    <!--layout="@layout/toolbar"/>-->
+
+
+            </LinearLayout>
+
+        </android.support.v7.widget.Toolbar>
+
+        <ScrollView
+            android:id="@+id/homeSV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/recCoursesCV"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/home_btn_height"
+                    app:cardCornerRadius="20dp"
+                    android:clipToPadding="true"
+                    android:layout_marginBottom="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:adjustViewBounds="true"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/books_bg"/>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:adjustViewBounds="true"
+                            android:scaleType="centerCrop"
+                            android:alpha="0.6"
+                            android:src="@drawable/gradient_bo"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:padding="20dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="22sp"
+                                android:textAllCaps="true"
+                                android:textColor="@android:color/white"
+                                android:text="@string/recommended"/>
+
+                            <TextView
+                                android:visibility="gone"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="22sp"
+                                android:textAllCaps="true"
+                                android:textColor="@android:color/white"
+                                android:text="@string/courses"/>
+
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/discoverCoursesCV"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/home_btn_height"
+                    app:cardCornerRadius="20dp"
+                    android:clipToPadding="true"
+                    android:layout_marginBottom="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:adjustViewBounds="true"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/writing_bg"/>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:adjustViewBounds="true"
+                            android:scaleType="centerCrop"
+                            android:alpha="0.6"
+                            android:src="@drawable/gradient_bo"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:padding="20dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="22sp"
+                                android:textAllCaps="true"
+                                android:textColor="@android:color/white"
+                                android:text="@string/discover"/>
+
+                            <TextView
+                                android:visibility="gone"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="22sp"
+                                android:textAllCaps="true"
+                                android:textColor="@android:color/white"
+                                android:text="@string/courses"/>
+
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/langCoursesCV"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/home_btn_height"
+                    app:cardCornerRadius="20dp"
+                    android:clipToPadding="true"
+                    android:layout_marginBottom="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:adjustViewBounds="true"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/lang_bg"/>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:adjustViewBounds="true"
+                            android:scaleType="centerCrop"
+                            android:alpha="0.6"
+                            android:src="@drawable/gradient_bo"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:padding="20dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="22sp"
+                                android:textAllCaps="true"
+                                android:textColor="@android:color/white"
+                                android:text="@string/languages"/>
+
+                            <TextView
+                                android:visibility="gone"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="22sp"
+                                android:textAllCaps="true"
+                                android:textColor="@android:color/white"
+                                android:text="@string/courses"/>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/hdCV"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/home_btn_height"
+                    app:cardCornerRadius="20dp"
+                    android:clipToPadding="true"
+                    android:layout_marginBottom="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:adjustViewBounds="true"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/hd_bg"/>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:adjustViewBounds="true"
+                            android:scaleType="centerCrop"
+                            android:alpha="0.6"
+                            android:src="@drawable/gradient_bo"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:padding="20dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="22sp"
+                                android:textAllCaps="true"
+                                android:textColor="@android:color/white"
+                                android:text="@string/human_development"/>
+
+                            <TextView
+                                android:visibility="gone"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="22sp"
+                                android:textAllCaps="true"
+                                android:textColor="@android:color/white"
+                                android:text="@string/courses"/>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/nearCentersCV"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/home_btn_height"
+                    app:cardCornerRadius="20dp"
+                    android:clipToPadding="true">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:adjustViewBounds="true"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/viewing_tablet"/>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:adjustViewBounds="true"
+                            android:scaleType="centerCrop"
+                            android:alpha="0.6"
+                            android:src="@drawable/gradient_bo"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:padding="20dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="22sp"
+                                android:textAllCaps="true"
+                                android:textColor="@android:color/white"
+                                android:text="@string/near"/>
+
+                            <TextView
+                                android:visibility="gone"
+                                android:id="@+id/coursesTV"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="22sp"
+                                android:textAllCaps="true"
+                                android:textColor="@android:color/white"
+                                android:text="@string/centers"/>
+
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+
+        </ScrollView>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/coursesRV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+        </android.support.v7.widget.RecyclerView>
+
+    </LinearLayout>
+
+    <include
+        layout="@layout/side_menu"/>
+
+</android.support.v4.widget.DrawerLayout>

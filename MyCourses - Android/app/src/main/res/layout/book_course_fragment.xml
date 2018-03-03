@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/select_starting_date"
+        android:textColor="@color/grey_dark"
+        android:textSize="17sp"/>
+
+    <Spinner
+        android:id="@+id/startingDatesS"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </Spinner>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/black"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"
+        android:alpha="0.2"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/promo_code"
+        android:textColor="@color/grey_dark"
+        android:textSize="17sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+        <Button
+            android:visibility="gone"
+            android:id="@+id/promoCodeBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/btn_bg"
+            android:layout_centerVertical="true"
+            android:text="Apply"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:layout_alignParentEnd="true"/>
+
+        <EditText
+            android:visibility="gone"
+            android:id="@+id/promoCodeET"
+            android:layout_toStartOf="@id/promoCodeBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:layout_centerVertical="true"
+            android:maxLines="1"
+            android:padding="5dp"/>
+
+        <Spinner
+            android:id="@+id/promoCodesS"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toStartOf="@id/promoCodeBtn"
+            android:layout_centerVertical="true">
+
+        </Spinner>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/black"
+        android:layout_marginTop="5dp"
+        android:alpha="0.2"/>
+
+    <LinearLayout
+        android:id="@+id/promoCodeLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fees" />
+
+            <TextView
+                android:id="@+id/feesTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0 L.E"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/discount" />
+
+            <TextView
+                android:id="@+id/discountTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0%"
+                android:textStyle="bold"
+                android:textColor="@android:color/holo_red_dark"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/final_fees" />
+
+            <TextView
+                android:id="@+id/finalFeesTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0 L.E"
+                android:textStyle="bold"
+                android:textColor="@android:color/holo_green_dark"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/callBtn"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/btn_bg_green"
+            android:layout_marginTop="16dp"
+            android:text="@string/call_center"
+            android:textColor="@android:color/white"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/bookBtn"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/btn_bg"
+            android:layout_marginTop="16dp"
+            android:text="@string/book_now"
+            android:textColor="@android:color/white"
+            android:textAllCaps="false"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>

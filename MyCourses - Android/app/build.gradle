@@ -1,0 +1,90 @@
+apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+
+android {
+    compileSdkVersion 27
+    buildToolsVersion "27.0.2"
+    defaultConfig {
+        applicationId "com.mycoursesapp"
+        minSdkVersion 16
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+android.buildTypes.debug.manifestPlaceholders = [
+        twitterConsumerKey   : "vf0zpRD0apGzKvDUg5GZa7FYK",
+        twitterConsumerSecret: "r8SfYDSVb1D8CUDA922kmHZuFswpt5R9Cv8TEqWXCb1Dc80b7m",
+        googleWebClientId    : "1012881778632-o9j8qa0bb5m0cngpakp1vn88jot6noai.apps.googleusercontent.com",
+        facebookAppId        : "2038579076385900",
+        instagramClientId    : "Set your instagram application client id",
+        instagramClientSecret: "Set your instagram application client secret key id",
+        instagramRedirectUri : "Set your instagram application redirect uri"
+]
+
+android.buildTypes.release.manifestPlaceholders = [
+        twitterConsumerKey   : "vf0zpRD0apGzKvDUg5GZa7FYK",
+        twitterConsumerSecret: "r8SfYDSVb1D8CUDA922kmHZuFswpt5R9Cv8TEqWXCb1Dc80b7m",
+        googleWebClientId    : "1012881778632-o9j8qa0bb5m0cngpakp1vn88jot6noai.apps.googleusercontent.com",
+        facebookAppId        : "2038579076385900",
+        instagramClientId    : "Set your instagram application client id",
+        instagramClientSecret: "Set your instagram application client secret key id",
+        instagramRedirectUri : "Set your instagram application redirect uri"
+]
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:27.0.2'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    implementation 'com.google.android.gms:play-services-maps:11.8.0'
+    compile 'com.android.support:design:27.0.2'
+    compile 'com.android.support:recyclerview-v7:27.0.2'
+    compile 'com.android.support:cardview-v7:27.0.2'
+
+    compile 'com.android.support:multidex:1.0.2'
+
+
+    compile 'com.squareup.okhttp3:okhttp:3.9.1'
+    compile 'de.hdodenhof:circleimageview:2.2.0'
+
+    compile 'com.google.android.gms:play-services-maps:11.8.0'
+    compile 'com.google.android.gms:play-services-location:11.8.0'
+    compile 'com.google.maps.android:android-maps-utils:0.4.4'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+
+    // Pages Indicator
+    compile 'me.relex:circleindicator:1.2.2@aar'
+    compile 'com.dlazaro66.qrcodereaderview:qrcodereaderview:2.0.3'
+
+    // Social Login
+    implementation 'com.github.MamdouhRElNakeeb:SocialManager:1.0.3'
+    //a678ac2ba781400ca0374ce923c64333305f3947
+    //45a6c1c3e1f9c704ede4c7ad223812bfa98f0890
+
+    // Search
+    implementation 'com.github.mancj:MaterialSearchBar:0.7.5'
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+
+
+    compile 'com.google.firebase:firebase-core:11.8.0'
+    compile('com.crashlytics.sdk.android:crashlytics:2.7.1@aar') {
+        transitive = true
+    }
+}
+
+apply plugin: 'com.google.gms.google-services'

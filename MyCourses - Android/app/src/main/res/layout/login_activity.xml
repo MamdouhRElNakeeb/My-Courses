@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:src="@drawable/bg1"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:src="@drawable/bg3"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"/>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/blue_screen"
+        android:scaleType="centerCrop"
+        android:alpha="0.4"
+        android:adjustViewBounds="true"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scaleY="-1"
+            android:src="@drawable/white_gradient"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:src="@drawable/white_gradient"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"/>
+    </LinearLayout>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/loginCV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@android:color/transparent"
+        android:layout_centerInParent="true"
+        app:cardElevation="20dp"
+        android:clipToPadding="true"
+        app:cardUseCompatPadding="true"
+        app:cardCornerRadius="30dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="400dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/blur_bg"
+                android:scaleType="centerCrop"
+                android:alpha="0.8"/>
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/loginVP"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+            </android.support.v4.view.ViewPager>
+
+            <me.relex.circleindicator.CircleIndicator
+                android:id="@+id/page_indicator"
+                android:layout_width="match_parent"
+                app:ci_width="8dp"
+                app:ci_height="8dp"
+                app:ci_margin="6dp"
+                app:ci_drawable="@drawable/btn_bg"
+                android:layout_alignParentBottom="true"
+                android:layout_height="48dp"/>
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <Button
+        android:id="@+id/loginRegBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-40dp"
+        android:background="@android:color/transparent"
+        android:text="Don't have an account? Register here"
+        android:textSize="16sp"
+        android:textAllCaps="false"
+        android:textColor="@color/transparentBlack"
+        android:layout_below="@id/loginCV"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/loginCV"
+        android:layout_marginTop="-50dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/white_gradient"
+        android:scaleY="-1"
+        android:adjustViewBounds="true"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/loginRegBtn"
+        android:scaleType="fitCenter"
+        android:src="@drawable/logo"
+        android:adjustViewBounds="true"/>
+
+</RelativeLayout>

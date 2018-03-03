@@ -1,0 +1,124 @@
+<resources>
+    <string name="app_name">My Courses</string>
+    <string name="title_activity_centers">المراكز</string>
+
+    <string name="dialog_play_services_unavailable">Google Play Services are unavailable.</string>
+    <string name="dialog_download_play_services">Download Play Services</string>
+    <string name="dialog_close_program">إغلاق التطبيق</string>
+    <!--    Permissions    -->
+    <string name="permission_rationale_location">Access to the location service is required to demonstrate the \'my location\' feature, which shows your current location on the map.</string>
+    <string name="location_permission_denied">This sample requires location permission to enable the \'my location\' layer. Please try again and grant access to use the location.\nIf the permission has been permanently denied, it can be enabled from the System Settings &gt; Apps &gt; \'Google Maps API Demos\'.</string>
+    <string name="permission_required_toast">Location permission is required for this demo.</string>
+
+    <!-- Social Login -->
+    <string name="facebook_app_id">2038579076385900</string>
+    <string name="fb_login_protocol_scheme">fb2038579076385900</string>
+
+    <string name="com.twitter.sdk.android.CONSUMER_KEY">vf0zpRD0apGzKvDUg5GZa7FYK</string>
+    <string name="com.twitter.sdk.android.CONSUMER_SECRET">r8SfYDSVb1D8CUDA922kmHZuFswpt5R9Cv8TEqWXCb1Dc80b7m</string>
+
+    <string name="server_client_id">1012881778632-o9j8qa0bb5m0cngpakp1vn88jot6noai.apps.googleusercontent.com</string>
+    <string name="google_client_secret">-phNP9PFsmtWvqClOldVVLD8</string>
+
+    <string name="change_lang">هل أنت متأكد من تغيير لغة التطبيق؟</string>
+
+    <!-- Other -->
+    <string name="save">حفظ</string>
+    <string name="modify">تعديل</string>
+    <string name="percentage">النسبة المئوية</string>
+    <string name="no">لا</string>
+    <string name="yes">نعم</string>
+    <string name="all">الكل</string>
+    <string name="name">الإسم</string>
+    <string name="email">البريد الإلكترونى</string>
+    <string name="password">كلمة السر</string>
+    <string name="dob">تاريخ الميلاد</string>
+    <string name="login">دخول</string>
+    <string name="register">تسجيل</string>
+    <string name="logout">خروج</string>
+    <string name="home">الرئيسية</string>
+    <string name="settings">الإعدادات</string>
+    <string name="follow_us">تابعنا على</string>
+    <string name="lang">اللغة</string>
+    <string name="back">رجوع</string>
+    <string name="privacy">سياسة الخصوصية</string>
+    <string name="terms">بنود الإستخدام</string>
+    <string name="app_ver">نسخة التطبيق</string>
+
+
+
+    <string name="centers">المراكز</string>
+    <string name="courses">الكورسات</string>
+    <string name="bookings">الحجوزات</string>
+    <string name="center">مركز:</string>
+    <string name="course">كورس</string>
+    <string name="address">العنوان</string>
+    <string name="info">تفاصيل</string>
+    <string name="promo_code2">كوبون: </string>
+    <string name="receive_notifs">الإشعارات</string>
+    <string name="comp_reg">تكملة التسجيل</string>
+    <string name="promotions">الكوبونات</string>
+
+    <!-- Home -->
+    <string name="find_course">إبحث</string>
+    <string name="recommended">الكورسات \n الموصى بها</string>
+    <string name="discover">إكتشف \n الكورسات</string>
+    <string name="languages">كورسات \n اللغات</string>
+    <string name="human_development">كورسات \n تنمية بشرية</string>
+    <string name="near">المراكز \n القريبة</string>
+
+    <!-- Titles -->
+    <string name="recommended2">الكورسات الموصى بها</string>
+    <string name="discover2">إكتشف الكورسات</string>
+    <string name="languages2">كورسات اللغات</string>
+    <string name="human_development2">كورسات تنمية بشرية</string>
+    <string name="near2">المراكز القريبة</string>
+
+    <!-- Side Menu -->
+    <string name="my_bookings">حجوزاتى</string>
+    <string name="certificates">الشهادات</string>
+    <string name="promo_code">كوبون</string>
+    <string name="invite">ادعو الأصدقاء</string>
+    <string name="contact">تواصل معنا</string>
+
+    <!-- Course Profile -->
+    <string name="instructor">المُعلم: </string>
+    <string name="starting_at">معاد البدء: </string>
+    <string name="starting_date">تاريخ البدء: </string>
+    <string name="fees">التكلفة: </string>
+    <string name="rate">التقييم: </string>
+
+    <!-- Book Course -->
+    <string name="book">إحجز</string>
+    <string name="select_starting_date">إختار تاريخ البدء: </string>
+    <string name="course_starting_date">تاريخ بدء الكورس</string>
+    <string name="choose_promo_code_apply">إختار كوبون</string>
+    <string name="discount">تخفيض: </string>
+    <string name="final_fees">التكلفة النهائية: </string>
+    <string name="book_now">إحجز الآن</string>
+    <string name="call_center">إتصل بالمركز</string>
+
+    <!-- Add Certificate -->
+    <string name="add_cer">أضف شهادة</string>
+    <string name="cer_name">إسم الشهادة</string>
+    <string name="cer_link">رابط الشهادة</string>
+
+    <!-- Filter -->
+    <string name="filter_courses">رتب الكوسات</string>
+    <string name="fees_lh">التكلفة: من الأعلى للأقل</string>
+    <string name="fees_hl">التكلفة: من الأقل للأعلى</string>
+    <string name="rate_lh">التقييم: من الأعلى للأقل</string>
+    <string name="rate_hl">التقييم: من الأقل للأعلى</string>
+
+    <!-- Complete Profile -->
+    <string name="mobile_no">رقم الموبايل</string>
+    <string name="university_school">إسم المدرسة / الجامعه</string>
+    <string name="dep_major">القشم / التخصص</string>
+    <string name="fields_of_study">مجالات الدراسة</string>
+
+    <string-array name="languages">
+        <item>@string/modify</item>
+        <item>English</item>
+        <item>العربية</item>
+    </string-array>
+</resources>

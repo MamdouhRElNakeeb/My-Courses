@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/toolbar"/>
+
+    <RelativeLayout
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/receive_notifs"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"/>
+
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lang"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"/>
+
+        <Spinner
+            android:id="@+id/languagesS"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </Spinner>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/privacyTV"
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/privacy"
+        android:textAllCaps="false"
+        android:background="@android:color/transparent"
+        android:gravity="start|center_vertical"
+        android:textSize="20sp"
+        android:textStyle="normal"
+        android:textColor="@android:color/black"/>
+
+    <TextView
+        android:id="@+id/termsTV"
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/terms"
+        android:textAllCaps="false"
+        android:background="@android:color/transparent"
+        android:gravity="start|center_vertical"
+        android:textSize="20sp"
+        android:textStyle="normal"
+        android:textColor="@android:color/black"/>
+
+
+    <LinearLayout
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/app_ver"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/versionNoTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1.0.5"
+            android:textSize="17sp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

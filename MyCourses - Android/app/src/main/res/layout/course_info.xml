@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/course_item_font"
+            android:text="@string/info"/>
+
+        <TextView
+            android:id="@+id/infoTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/course_item_font"
+            android:textStyle="bold"
+            android:layout_marginBottom="10dp"
+            android:text=""/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/course_item_font"
+            android:text="@string/instructor"/>
+
+        <TextView
+            android:id="@+id/instructorTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/course_item_font"
+            android:textStyle="bold"
+            android:layout_marginBottom="10dp"
+            android:text="Mamdouh El Nakeeb"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/course_item_font"
+            android:text="@string/starting_at"/>
+
+        <TextView
+            android:id="@+id/startingDateTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/course_item_font"
+            android:layout_marginBottom="10dp"
+            android:textStyle="bold"
+            android:maxLines="1"
+            android:text="Jan. 10, 2018"/>
+
+        <TextView
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/course_item_font"
+            android:text="Rate: "/>
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/rateTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/course_item_font"
+            android:textStyle="bold"
+            android:layout_marginBottom="10dp"
+            android:text="4.8"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/course_item_font"
+            android:text="@string/fees"/>
+
+        <TextView
+            android:id="@+id/feesTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/course_item_font"
+            android:textStyle="bold"
+            android:maxLines="1"
+            android:text="7000 L.E"/>
+
+    </LinearLayout>
+
+
+
+</ScrollView>
