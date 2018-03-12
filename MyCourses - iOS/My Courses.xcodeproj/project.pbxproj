@@ -7,18 +7,38 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		33041BE3205546F00087FF00 /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33041BE2205546F00087FF00 /* SplashVC.swift */; };
+		33041BE52055499C0087FF00 /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33041BE42055499C0087FF00 /* SideMenuVC.swift */; };
+		33041BE7205563C80087FF00 /* HomeTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33041BE6205563C80087FF00 /* HomeTVC.swift */; };
+		33041BE92055A09B0087FF00 /* RecommendedCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33041BE82055A09B0087FF00 /* RecommendedCVC.swift */; };
+		33041BEB2055A3B30087FF00 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33041BEA2055A3B30087FF00 /* Course.swift */; };
+		33041BED2055A4C30087FF00 /* RecCourseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33041BEC2055A4C30087FF00 /* RecCourseCell.swift */; };
+		33041BEF20561C280087FF00 /* CoursesDiscoverTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33041BEE20561C260087FF00 /* CoursesDiscoverTVC.swift */; };
+		33041BF120561DEA0087FF00 /* CoursesDiscoverTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33041BF020561DEA0087FF00 /* CoursesDiscoverTVCell.swift */; };
 		332C8C832048835B00BE2646 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332C8C822048835B00BE2646 /* AppDelegate.swift */; };
 		332C8C882048835B00BE2646 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 332C8C862048835B00BE2646 /* Main.storyboard */; };
 		332C8C8A2048835B00BE2646 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 332C8C892048835B00BE2646 /* Assets.xcassets */; };
 		332C8C8D2048835B00BE2646 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 332C8C8B2048835B00BE2646 /* LaunchScreen.storyboard */; };
 		332C8C962048846500BE2646 /* LoginMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332C8C952048846500BE2646 /* LoginMainVC.swift */; };
 		332C8C9920488C5B00BE2646 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332C8C9820488C5700BE2646 /* Extensions.swift */; };
+		33B465DC205443D400446F99 /* CompRegTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B465DB205443D400446F99 /* CompRegTVC.swift */; };
+		33B465E120544B0E00446F99 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B465E020544B0E00446F99 /* Category.swift */; };
+		33B7938B2053EF1A00E84032 /* Consts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B7938A2053EF1A00E84032 /* Consts.swift */; };
+		33CD9EA4204DB18600579125 /* RegisterPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33CD9EA3204DB18600579125 /* RegisterPage.swift */; };
 		33FE11612048A2EA00A01923 /* LoginPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FE11602048A2EA00A01923 /* LoginPage.swift */; };
 		924028D9CA51EDD89287472C /* Pods_My_Courses.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AE40D41259753C29E45E99B /* Pods_My_Courses.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0AE40D41259753C29E45E99B /* Pods_My_Courses.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_My_Courses.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		33041BE2205546F00087FF00 /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
+		33041BE42055499C0087FF00 /* SideMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuVC.swift; sourceTree = "<group>"; };
+		33041BE6205563C80087FF00 /* HomeTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTVC.swift; sourceTree = "<group>"; };
+		33041BE82055A09B0087FF00 /* RecommendedCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedCVC.swift; sourceTree = "<group>"; };
+		33041BEA2055A3B30087FF00 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
+		33041BEC2055A4C30087FF00 /* RecCourseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecCourseCell.swift; sourceTree = "<group>"; };
+		33041BEE20561C260087FF00 /* CoursesDiscoverTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesDiscoverTVC.swift; sourceTree = "<group>"; };
+		33041BF020561DEA0087FF00 /* CoursesDiscoverTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesDiscoverTVCell.swift; sourceTree = "<group>"; };
 		332C8C7F2048835B00BE2646 /* My Courses.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My Courses.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		332C8C822048835B00BE2646 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		332C8C872048835B00BE2646 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -27,6 +47,10 @@
 		332C8C8E2048835B00BE2646 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		332C8C952048846500BE2646 /* LoginMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginMainVC.swift; sourceTree = "<group>"; };
 		332C8C9820488C5700BE2646 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		33B465DB205443D400446F99 /* CompRegTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompRegTVC.swift; sourceTree = "<group>"; };
+		33B465E020544B0E00446F99 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		33B7938A2053EF1A00E84032 /* Consts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Consts.swift; sourceTree = "<group>"; };
+		33CD9EA3204DB18600579125 /* RegisterPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPage.swift; sourceTree = "<group>"; };
 		33FE11602048A2EA00A01923 /* LoginPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPage.swift; sourceTree = "<group>"; };
 		5D04678EA58C0DF83244740D /* Pods-My Courses.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-My Courses.release.xcconfig"; path = "Pods/Target Support Files/Pods-My Courses/Pods-My Courses.release.xcconfig"; sourceTree = "<group>"; };
 		671BE70EF92A619FB40277CD /* Pods-My Courses.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-My Courses.debug.xcconfig"; path = "Pods/Target Support Files/Pods-My Courses/Pods-My Courses.debug.xcconfig"; sourceTree = "<group>"; };
@@ -65,6 +89,7 @@
 		332C8C812048835B00BE2646 /* My Courses */ = {
 			isa = PBXGroup;
 			children = (
+				33B465DF20544AFF00446F99 /* Models */,
 				33FE115F2048A2CD00A01923 /* Cells */,
 				332C8C9720488C4100BE2646 /* Helper */,
 				332C8C94204883C800BE2646 /* Contollers */,
@@ -80,7 +105,13 @@
 		332C8C94204883C800BE2646 /* Contollers */ = {
 			isa = PBXGroup;
 			children = (
+				33041BE2205546F00087FF00 /* SplashVC.swift */,
+				33041BE42055499C0087FF00 /* SideMenuVC.swift */,
 				332C8C952048846500BE2646 /* LoginMainVC.swift */,
+				33B465DB205443D400446F99 /* CompRegTVC.swift */,
+				33041BE6205563C80087FF00 /* HomeTVC.swift */,
+				33041BE82055A09B0087FF00 /* RecommendedCVC.swift */,
+				33041BEE20561C260087FF00 /* CoursesDiscoverTVC.swift */,
 			);
 			path = Contollers;
 			sourceTree = "<group>";
@@ -89,14 +120,27 @@
 			isa = PBXGroup;
 			children = (
 				332C8C9820488C5700BE2646 /* Extensions.swift */,
+				33B7938A2053EF1A00E84032 /* Consts.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		33B465DF20544AFF00446F99 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				33B465E020544B0E00446F99 /* Category.swift */,
+				33041BEA2055A3B30087FF00 /* Course.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		33FE115F2048A2CD00A01923 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
 				33FE11602048A2EA00A01923 /* LoginPage.swift */,
+				33CD9EA3204DB18600579125 /* RegisterPage.swift */,
+				33041BEC2055A4C30087FF00 /* RecCourseCell.swift */,
+				33041BF020561DEA0087FF00 /* CoursesDiscoverTVCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -197,17 +241,45 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-My Courses/Pods-My Courses-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FSPagerView/FSPagerView.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookShare/FacebookShare.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SideMenuController/SideMenuController.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${PODS_ROOT}/TwitterCore/iOS/TwitterCore.framework",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework",
 				"${BUILT_PRODUCTS_DIR}/libwebp/libwebp.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DropDown.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FSPagerView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookShare.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenuController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/libwebp.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -239,9 +311,14 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-My Courses/Pods-My Courses-resources.sh",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterKitResources.bundle",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterShareExtensionUIResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -255,10 +332,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33041BEB2055A3B30087FF00 /* Course.swift in Sources */,
+				33CD9EA4204DB18600579125 /* RegisterPage.swift in Sources */,
+				33B7938B2053EF1A00E84032 /* Consts.swift in Sources */,
+				33041BF120561DEA0087FF00 /* CoursesDiscoverTVCell.swift in Sources */,
+				33041BED2055A4C30087FF00 /* RecCourseCell.swift in Sources */,
+				33B465DC205443D400446F99 /* CompRegTVC.swift in Sources */,
 				33FE11612048A2EA00A01923 /* LoginPage.swift in Sources */,
+				33041BE7205563C80087FF00 /* HomeTVC.swift in Sources */,
+				33041BE52055499C0087FF00 /* SideMenuVC.swift in Sources */,
+				33041BE92055A09B0087FF00 /* RecommendedCVC.swift in Sources */,
 				332C8C832048835B00BE2646 /* AppDelegate.swift in Sources */,
+				33B465E120544B0E00446F99 /* Category.swift in Sources */,
 				332C8C9920488C5B00BE2646 /* Extensions.swift in Sources */,
 				332C8C962048846500BE2646 /* LoginMainVC.swift in Sources */,
+				33041BEF20561C280087FF00 /* CoursesDiscoverTVC.swift in Sources */,
+				33041BE3205546F00087FF00 /* SplashVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
