@@ -10,5 +10,15 @@ pod 'Alamofire', '~> 4.3'
 pod 'SDWebImage/WebP', '~>3.8'
 pod 'SideMenuController'
 pod 'FSPagerView'
+pod 'DropDown'
+pod 'SwiftyJSON'
+
+pod 'FacebookCore'
+pod 'FacebookLogin'
+pod 'FacebookShare'
+
+pod 'GoogleSignIn'
+
+pod 'TwitterKit'
 
 end
