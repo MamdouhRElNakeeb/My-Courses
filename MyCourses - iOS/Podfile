@@ -12,6 +12,7 @@ pod 'SideMenuController'
 pod 'FSPagerView'
 pod 'DropDown'
 pod 'SwiftyJSON'
+pod 'GoogleMaps'
 
 pod 'FacebookCore'
 pod 'FacebookLogin'

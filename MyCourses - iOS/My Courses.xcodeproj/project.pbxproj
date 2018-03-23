@@ -21,6 +21,10 @@
 		332C8C8D2048835B00BE2646 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 332C8C8B2048835B00BE2646 /* LaunchScreen.storyboard */; };
 		332C8C962048846500BE2646 /* LoginMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332C8C952048846500BE2646 /* LoginMainVC.swift */; };
 		332C8C9920488C5B00BE2646 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332C8C9820488C5700BE2646 /* Extensions.swift */; };
+		337C13E12056F603000E16CA /* CoursesTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337C13E02056F603000E16CA /* CoursesTVC.swift */; };
+		337C13E320570132000E16CA /* CentersMapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337C13E220570132000E16CA /* CentersMapVC.swift */; };
+		337C13E520570D98000E16CA /* Center.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337C13E420570D98000E16CA /* Center.swift */; };
+		337C13E720574609000E16CA /* Clustering in Resources */ = {isa = PBXBuildFile; fileRef = 337C13E620574609000E16CA /* Clustering */; };
 		33B465DC205443D400446F99 /* CompRegTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B465DB205443D400446F99 /* CompRegTVC.swift */; };
 		33B465E120544B0E00446F99 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B465E020544B0E00446F99 /* Category.swift */; };
 		33B7938B2053EF1A00E84032 /* Consts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B7938A2053EF1A00E84032 /* Consts.swift */; };
@@ -47,6 +51,12 @@
 		332C8C8E2048835B00BE2646 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		332C8C952048846500BE2646 /* LoginMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginMainVC.swift; sourceTree = "<group>"; };
 		332C8C9820488C5700BE2646 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		337C13E02056F603000E16CA /* CoursesTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesTVC.swift; sourceTree = "<group>"; };
+		337C13E220570132000E16CA /* CentersMapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CentersMapVC.swift; sourceTree = "<group>"; };
+		337C13E420570D98000E16CA /* Center.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Center.swift; sourceTree = "<group>"; };
+		337C13E620574609000E16CA /* Clustering */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Clustering; sourceTree = "<group>"; };
+		337C13E8205747B4000E16CA /* My Courses-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "My Courses-Bridging-Header.h"; sourceTree = "<group>"; };
+		33977E0A2058463400EC7509 /* My Courses.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "My Courses.entitlements"; sourceTree = "<group>"; };
 		33B465DB205443D400446F99 /* CompRegTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompRegTVC.swift; sourceTree = "<group>"; };
 		33B465E020544B0E00446F99 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		33B7938A2053EF1A00E84032 /* Consts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Consts.swift; sourceTree = "<group>"; };
@@ -89,6 +99,7 @@
 		332C8C812048835B00BE2646 /* My Courses */ = {
 			isa = PBXGroup;
 			children = (
+				33977E0A2058463400EC7509 /* My Courses.entitlements */,
 				33B465DF20544AFF00446F99 /* Models */,
 				33FE115F2048A2CD00A01923 /* Cells */,
 				332C8C9720488C4100BE2646 /* Helper */,
@@ -112,6 +123,8 @@
 				33041BE6205563C80087FF00 /* HomeTVC.swift */,
 				33041BE82055A09B0087FF00 /* RecommendedCVC.swift */,
 				33041BEE20561C260087FF00 /* CoursesDiscoverTVC.swift */,
+				337C13E02056F603000E16CA /* CoursesTVC.swift */,
+				337C13E220570132000E16CA /* CentersMapVC.swift */,
 			);
 			path = Contollers;
 			sourceTree = "<group>";
@@ -119,8 +132,10 @@
 		332C8C9720488C4100BE2646 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				337C13E620574609000E16CA /* Clustering */,
 				332C8C9820488C5700BE2646 /* Extensions.swift */,
 				33B7938A2053EF1A00E84032 /* Consts.swift */,
+				337C13E8205747B4000E16CA /* My Courses-Bridging-Header.h */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -130,6 +145,7 @@
 			children = (
 				33B465E020544B0E00446F99 /* Category.swift */,
 				33041BEA2055A3B30087FF00 /* Course.swift */,
+				337C13E420570D98000E16CA /* Center.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -198,6 +214,14 @@
 					332C8C7E2048835B00BE2646 = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -226,6 +250,7 @@
 			files = (
 				332C8C8D2048835B00BE2646 /* LaunchScreen.storyboard in Resources */,
 				332C8C8A2048835B00BE2646 /* Assets.xcassets in Resources */,
+				337C13E720574609000E16CA /* Clustering in Resources */,
 				332C8C882048835B00BE2646 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -312,6 +337,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-My Courses/Pods-My Courses-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
 				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
 				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterKitResources.bundle",
 				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterShareExtensionUIResources.bundle",
@@ -332,6 +358,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				337C13E12056F603000E16CA /* CoursesTVC.swift in Sources */,
 				33041BEB2055A3B30087FF00 /* Course.swift in Sources */,
 				33CD9EA4204DB18600579125 /* RegisterPage.swift in Sources */,
 				33B7938B2053EF1A00E84032 /* Consts.swift in Sources */,
@@ -339,6 +366,7 @@
 				33041BED2055A4C30087FF00 /* RecCourseCell.swift in Sources */,
 				33B465DC205443D400446F99 /* CompRegTVC.swift in Sources */,
 				33FE11612048A2EA00A01923 /* LoginPage.swift in Sources */,
+				337C13E320570132000E16CA /* CentersMapVC.swift in Sources */,
 				33041BE7205563C80087FF00 /* HomeTVC.swift in Sources */,
 				33041BE52055499C0087FF00 /* SideMenuVC.swift in Sources */,
 				33041BE92055A09B0087FF00 /* RecommendedCVC.swift in Sources */,
@@ -347,6 +375,7 @@
 				332C8C9920488C5B00BE2646 /* Extensions.swift in Sources */,
 				332C8C962048846500BE2646 /* LoginMainVC.swift in Sources */,
 				33041BEF20561C280087FF00 /* CoursesDiscoverTVC.swift in Sources */,
+				337C13E520570D98000E16CA /* Center.swift in Sources */,
 				33041BE3205546F00087FF00 /* SplashVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -485,7 +514,9 @@
 			baseConfigurationReference = 671BE70EF92A619FB40277CD /* Pods-My Courses.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "My Courses/My Courses.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 65TWY5P96S;
 				INFOPLIST_FILE = "My Courses/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mycoursesapp;
@@ -500,7 +531,9 @@
 			baseConfigurationReference = 5D04678EA58C0DF83244740D /* Pods-My Courses.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "My Courses/My Courses.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 65TWY5P96S;
 				INFOPLIST_FILE = "My Courses/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mycoursesapp;

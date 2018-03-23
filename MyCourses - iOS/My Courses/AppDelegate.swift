@@ -11,12 +11,12 @@ import FacebookCore
 import GoogleSignIn
 import TwitterKit
 import DropDown
+import GoogleMaps
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -28,6 +28,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        GIDSignIn.sharedInstance().clientID = Consts.GOOGLE_CLIENT_ID
         
         DropDown.startListeningToKeyboard()
+        GMSServices.provideAPIKey("AIzaSyAtxdt3WBppHr9sNSAKJFtbpA_q3YONk1o")
+        
         return true
     }
     

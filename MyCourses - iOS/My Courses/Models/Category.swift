@@ -12,6 +12,7 @@ struct Category: Codable {
     
     var id = 0
     var name = ""
+    var img = ""
     var selected = false
     
     init(id: Int, name: String) {
@@ -20,4 +21,10 @@ struct Category: Codable {
         self.name = name
     }
     
+    init(id: Int, name: String, img: String) {
+        
+        self.id = id
+        self.name = name
+        self.img = img
+    }
 }

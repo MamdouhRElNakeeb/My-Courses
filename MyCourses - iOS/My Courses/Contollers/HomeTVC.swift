@@ -70,6 +70,23 @@ class HomeTVC: UITableViewController {
             let vc =  self.storyboard?.instantiateViewController(withIdentifier: "RecommendedCVC") as! RecommendedCVC
             self.navigationController?.pushViewController(vc, animated: true)
             break
+        case 1:
+            let vc =  self.storyboard?.instantiateViewController(withIdentifier: "CoursesDiscoverTVC") as! CoursesDiscoverTVC
+            self.navigationController?.pushViewController(vc, animated: true)
+            break
+        case 2:
+            let vc =  self.storyboard?.instantiateViewController(withIdentifier: "CoursesTVC") as! CoursesTVC
+            vc.url = Consts.COURSES_FILTER + "Language"
+            self.navigationController?.pushViewController(vc, animated: true)
+            break
+        case 3:
+            let vc =  self.storyboard?.instantiateViewController(withIdentifier: "CoursesTVC") as! CoursesTVC
+            vc.url = Consts.COURSES_FILTER + "Human_Development"
+            self.navigationController?.pushViewController(vc, animated: true)
+        case 4:
+            let vc =  self.storyboard?.instantiateViewController(withIdentifier: "CentersMapVC") as! CentersMapVC
+            self.navigationController?.pushViewController(vc, animated: true)
+            break
         default:
             break
         }

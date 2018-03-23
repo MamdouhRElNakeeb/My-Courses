@@ -560,6 +560,7 @@
                         <segue destination="hHA-KI-loI" kind="push" id="Tx5-lY-I3n"/>
                         <segue destination="dbq-bz-UHI" kind="push" id="9UK-TA-Fnr"/>
                         <segue destination="49u-cU-kb8" kind="push" id="gY3-nU-tY0"/>
+                        <segue destination="hWi-Xj-E6v" kind="push" id="is2-id-nDz"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="48w-Cl-blg" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -787,7 +788,7 @@
             </objects>
             <point key="canvasLocation" x="-977" y="766"/>
         </scene>
-        <!--Discover Courses-->
+        <!--Categories-->
         <scene sceneID="fJY-4G-4p4">
             <objects>
                 <tableViewController storyboardIdentifier="CoursesDiscoverTVC" id="hHA-KI-loI" customClass="CoursesDiscoverTVC" customModule="My_Courses" customModuleProvider="target" sceneMemberID="viewController">
@@ -809,7 +810,7 @@
                                         </imageView>
                                         <view alpha="0.40000000596046448" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qrM-yv-wnz" customClass="GradientView" customModule="My_Courses" customModuleProvider="target">
                                             <rect key="frame" x="8" y="10" width="359" height="130"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="boolean" keyPath="diagonalMode" value="YES"/>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="endColor">
@@ -834,6 +835,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="gradient" destination="qrM-yv-wnz" id="hxB-F2-VlT"/>
                                     <outlet property="img" destination="Fjv-eh-nFk" id="1cj-9b-SLN"/>
                                     <outlet property="name" destination="x53-QC-Jcg" id="pFy-er-jCz"/>
                                 </connections>
@@ -845,14 +847,7 @@
                             <outlet property="delegate" destination="hHA-KI-loI" id="CfC-0S-aPO"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Discover Courses" id="LQ9-BO-nNL">
-                        <barButtonItem key="leftBarButtonItem" image="side_menu_icn" id="YoU-wI-yVO">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <connections>
-                                <action selector="sideMenuOnClick:" destination="hHA-KI-loI" id="XEC-mG-r9D"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Categories" id="LQ9-BO-nNL"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lKH-yi-Mdr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -861,7 +856,7 @@
         <!--Courses-->
         <scene sceneID="HTy-aD-Kft">
             <objects>
-                <tableViewController storyboardIdentifier="CoursesTVC" id="49u-cU-kb8" customClass="CoursesDiscoverTVC" customModule="My_Courses" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="CoursesTVC" id="49u-cU-kb8" customClass="CoursesTVC" customModule="My_Courses" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="d51-Lw-tSm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -880,7 +875,7 @@
                                         </imageView>
                                         <view alpha="0.40000000596046448" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F6m-5w-JE2" customClass="GradientView" customModule="My_Courses" customModuleProvider="target">
                                             <rect key="frame" x="8" y="10" width="359" height="130"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="boolean" keyPath="diagonalMode" value="YES"/>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="endColor">
@@ -905,6 +900,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="gradient" destination="F6m-5w-JE2" id="THW-o7-Nez"/>
                                     <outlet property="img" destination="gO9-eK-uwp" id="axU-0d-c5R"/>
                                     <outlet property="name" destination="XHD-4z-5uU" id="aLX-BO-DVL"/>
                                 </connections>
@@ -916,18 +912,37 @@
                             <outlet property="delegate" destination="49u-cU-kb8" id="NsQ-jS-niE"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Courses" id="IbR-ZY-gmP">
-                        <barButtonItem key="leftBarButtonItem" image="side_menu_icn" id="lKI-gH-8jf">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <connections>
-                                <action selector="sideMenuOnClick:" destination="49u-cU-kb8" id="LHV-ga-Pbh"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Courses" id="IbR-ZY-gmP"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EW8-sh-fA1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2588" y="1498"/>
+        </scene>
+        <!--Centers-->
+        <scene sceneID="XvQ-Py-Shd">
+            <objects>
+                <viewController storyboardIdentifier="CentersMapVC" id="hWi-Xj-E6v" customClass="CentersMapVC" customModule="My_Courses" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dXu-86-hUl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pjh-kI-66h" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="0vk-Jr-2G5"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Centers" id="wQz-KN-eRJ"/>
+                    <connections>
+                        <outlet property="mapView" destination="Pjh-kI-66h" id="0N4-bt-u2E"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Zm-6f-Ybp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2588" y="2225.9370314842581"/>
         </scene>
     </scenes>
     <resources>

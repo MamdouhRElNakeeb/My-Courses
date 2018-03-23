@@ -11,11 +11,18 @@ import UIKit
 class CoursesDiscoverTVCell: UITableViewCell {
 
     @IBOutlet weak var img: UIImageView!
+    @IBOutlet weak var gradient: GradientView!
     @IBOutlet weak var name: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        img.layer.cornerRadius = 20
+        img.layer.masksToBounds = true
+        
+        gradient.layer.cornerRadius = 20
+        gradient.layer.masksToBounds = true
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

@@ -29,7 +29,7 @@ class SideMenuVC: UIViewController {
         menuTV.frame = CGRect(x: 20, y: view.frame.height / 2 - 50 * 5 / 2, width: view.frame.width * 2 / 3 - 60, height: 50 * 5)
         menuTV.backgroundColor = UIColor.clear
         
-        logoIV.frame = CGRect(x: menuTV.frame.minX, y: menuTV.frame.minY - 100, width: menuTV.frame.width, height: 60)
+        logoIV.frame = CGRect(x: menuTV.frame.minX, y: menuTV.frame.minY - 150, width: menuTV.frame.width, height: 130)
         logoIV.image = UIImage(named: "logo")
         logoIV.contentMode = .scaleAspectFit
        
