@@ -4,6 +4,7 @@ import android.Manifest;
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -436,6 +437,44 @@ public class Home extends AppCompatActivity {
                     case R.id.nav_settings:
                         intent = new Intent(getBaseContext(), Settings.class);
                         startActivity(intent);
+                        return true;
+
+                    case R.id.nav_facebook:
+
+                        String url = "";
+
+                        PackageManager packageManager = getPackageManager();
+                        try {
+                            int versionCode = packageManager.getPackageInfo("com.facebook.katana", 0).versionCode;
+                            if (versionCode >= 3002850) { //newer versions of fb app
+                                url = "fb://facewebmodal/f?href=" + "https://www.facebook.com/mycoursesapp";
+                            } else { //older versions of fb app
+                                url =  "fb://page/" + "mycoursesapp";
+                            }
+                        } catch (PackageManager.NameNotFoundException e) {
+                            url = "https://www.facebook.com/mycoursesapp"; //normal web url
+                        }
+
+                        Intent facebookIntent = new Intent(Intent.ACTION_VIEW);
+                        facebookIntent.setData(Uri.parse(url));
+                        startActivity(facebookIntent);
+
+                        return true;
+
+                    case R.id.nav_instagram:
+
+                        Uri uri = Uri.parse("http://instagram.com/_u/mycoursesapp");
+                        Intent likeIng = new Intent(Intent.ACTION_VIEW, uri);
+
+                        likeIng.setPackage("com.instagram.android");
+
+                        try {
+                            startActivity(likeIng);
+                        } catch (ActivityNotFoundException e) {
+                            startActivity(new Intent(Intent.ACTION_VIEW,
+                                    Uri.parse("http://instagram.com/mycoursesapp")));
+                        }
+
                         return true;
 
                     case R.id.nav_contact:

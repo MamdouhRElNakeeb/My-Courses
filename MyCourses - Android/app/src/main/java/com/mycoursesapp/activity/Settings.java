@@ -2,6 +2,7 @@ package com.mycoursesapp.activity;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -31,6 +32,8 @@ public class Settings extends BaseActivity {
     Spinner languagesS;
 
     TextView versionNoTV;
+    TextView aboutTV, privacyTV;
+
     int lang = 0;
 
     @Override
@@ -46,6 +49,32 @@ public class Settings extends BaseActivity {
         versionNoTV = findViewById(R.id.versionNoTV);
 
         versionNoTV.setText(BuildConfig.VERSION_NAME);
+
+
+        findViewById(R.id.aboutTV).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                String url = "https://mycoursesapp.com/about";
+                Intent i = new Intent(Intent.ACTION_VIEW);
+                i.setData(Uri.parse(url));
+                startActivity(i);
+
+            }
+        });
+
+        findViewById(R.id.termsTV).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                String url = "https://mycoursesapp.com/terms";
+                Intent i = new Intent(Intent.ACTION_VIEW);
+                i.setData(Uri.parse(url));
+                startActivity(i);
+
+            }
+        });
+
     }
 
     private void setNewLocale(String language) {

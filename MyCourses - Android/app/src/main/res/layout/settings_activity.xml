@@ -9,6 +9,7 @@
         layout="@layout/toolbar"/>
 
     <RelativeLayout
+        android:visibility="gone"
         android:padding="16dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -50,11 +51,11 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/privacyTV"
+        android:id="@+id/aboutTV"
         android:padding="16dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/privacy"
+        android:text="@string/about"
         android:textAllCaps="false"
         android:background="@android:color/transparent"
         android:gravity="start|center_vertical"
