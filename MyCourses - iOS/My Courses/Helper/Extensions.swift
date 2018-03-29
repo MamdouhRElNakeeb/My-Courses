@@ -140,9 +140,9 @@ extension UIImage{
             let paragraphStyle = NSMutableParagraphStyle()
             paragraphStyle.alignment = .center
             
-            let attrs = [NSFontAttributeName: UIFont(name: "HelveticaNeue", size: 17)!,
-                         NSForegroundColorAttributeName: UIColor.black,
-                         NSParagraphStyleAttributeName: paragraphStyle]
+            let attrs = [NSAttributedStringKey.font: UIFont(name: "HelveticaNeue", size: 17)!,
+                         NSAttributedStringKey.foregroundColor: UIColor.black,
+                         NSAttributedStringKey.paragraphStyle: paragraphStyle]
             
             text.draw(with: CGRect(x: 0, y: 5, width: frame.width, height: frame.height), options: .usesLineFragmentOrigin, attributes: attrs, context: nil)
             

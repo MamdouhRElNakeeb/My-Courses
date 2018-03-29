@@ -7,9 +7,10 @@
 //
 
 import Foundation
+import UIKit
 import GoogleMaps
 
-class Center{
+class Center: NSObject, GMUClusterItem{
     
     var id = 0
     var name = ""

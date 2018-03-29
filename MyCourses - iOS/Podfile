@@ -13,6 +13,7 @@ pod 'FSPagerView'
 pod 'DropDown'
 pod 'SwiftyJSON'
 pod 'GoogleMaps'
+pod 'Parchment'
 
 pod 'FacebookCore'
 pod 'FacebookLogin'

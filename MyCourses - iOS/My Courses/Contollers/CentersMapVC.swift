@@ -14,6 +14,7 @@ import SwiftyJSON
 class CentersMapVC: UIViewController {
 
     var mapView = GMSMapView()
+    var clusterManager: GMUClusterManager!
     
     var locationManager = CLLocationManager()
     var currentLocation: CLLocation?
@@ -26,6 +27,10 @@ class CentersMapVC: UIViewController {
 
         // Do any additional setup after loading the view.
         getLocationPermision()
+        
+        setupClusterMangager()
+        
+        getData()
     
     }
     
@@ -64,8 +69,22 @@ class CentersMapVC: UIViewController {
                     
                     let img = subJson["image"].stringValue
                     
-                    self.items.append(Center.init(id: id, name: name, info: info, address: address, latitude: lat, longitude: lon, img: img))
+                    if lat >= -85 && lat <= 85 && lon >= -85 && lon <= 85 {
+                        
+                        self.items.append(Center.init(id: id, name: name, info: info, address: address, latitude: lat, longitude: lon, img: img))
+                        
+                        let item = Center(position: CLLocationCoordinate2DMake(lat, lon), name: name)
+                        self.clusterManager.add(item)
+                        
+                    }
+                    
                 }
+                
+                // Call cluster() after items have been added to perform the clustering and rendering on map.
+                self.clusterManager.cluster()
+                
+                // Register self to listen to both GMUClusterManagerDelegate and GMSMapViewDelegate events.
+                self.clusterManager.setDelegate(self, mapDelegate: self)
                 
                 break
                 
@@ -125,6 +144,18 @@ class CentersMapVC: UIViewController {
         
         mapView.animate(to: camera)
     }
+    
+    func setupClusterMangager(){
+        
+        // Set up the cluster manager with default icon generator and renderer.
+        let iconGenerator = GMUDefaultClusterIconGenerator()
+        let algorithm = GMUNonHierarchicalDistanceBasedAlgorithm()
+        let renderer = GMUDefaultClusterRenderer(mapView: mapView, clusterIconGenerator: iconGenerator)
+        clusterManager = GMUClusterManager(map: mapView, algorithm: algorithm, renderer: renderer)
+        
+        
+    }
+    
 }
 
 extension CentersMapVC: CLLocationManagerDelegate {
@@ -142,7 +173,6 @@ extension CentersMapVC: CLLocationManagerDelegate {
         
         mapView.camera = camera
         mapView.animate(to: camera)
-        
         
         locationManager.stopUpdatingLocation()
         
@@ -171,3 +201,36 @@ extension CentersMapVC: CLLocationManagerDelegate {
         print("Error: \(error)")
     }
 }
+
+extension CentersMapVC: GMUClusterManagerDelegate, GMSMapViewDelegate{
+    
+    
+    func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
+        if let poiItem = marker.userData as? Center {
+            NSLog("Did tap marker for cluster item \(poiItem.name)")
+        } else {
+            NSLog("Did tap a normal marker")
+        }
+        return true
+    }
+    
+   
+    func clusterManager(_ clusterManager: GMUClusterManager, didTap clusterItem: GMUClusterItem) -> Bool {
+        
+        print("clusetItem Clicked \(clusterItem.position.latitude)")
+        
+        return true
+    }
+    
+    func clusterManager(_ clusterManager: GMUClusterManager, didTap cluster: GMUCluster) -> Bool {
+        let newCamera = GMSCameraPosition.camera(withTarget: cluster.position,
+                                                 zoom: mapView.camera.zoom + 1)
+        let update = GMSCameraUpdate.setCamera(newCamera)
+        mapView.moveCamera(update)
+        return false
+    }
+}
+
+
+
+
