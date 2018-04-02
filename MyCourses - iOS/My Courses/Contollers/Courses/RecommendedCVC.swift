@@ -14,6 +14,7 @@ class RecommendedCVC: UICollectionViewController {
 
     
     var items = Array<Course>()
+    var url = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,8 +47,6 @@ class RecommendedCVC: UICollectionViewController {
     }
 
     func getData() {
-        
-        let url = Consts.RECOMMENDED + "\(UserDefaults.standard.integer(forKey: "id"))/"
         
         Alamofire.request(url).responseJSON{
             
@@ -99,6 +98,11 @@ class RecommendedCVC: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         collectionView.deselectItem(at: indexPath, animated: true)
+        
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "CourseProfileVC") as! CourseProfileVC
+        vc.courseID = items[indexPath.row].id
+        self.navigationController?.pushViewController(vc, animated: true)
+        
     }
 
 }

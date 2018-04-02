@@ -19,6 +19,8 @@ class SideMenuVC: UIViewController {
     var menuTV = UITableView()
     var logoIV = UIImageView()
     
+    let menuItems = 8
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -26,7 +28,7 @@ class SideMenuVC: UIViewController {
         
         menuTV.dataSource = self
         menuTV.delegate = self
-        menuTV.frame = CGRect(x: 20, y: view.frame.height / 2 - 50 * 5 / 2, width: view.frame.width * 2 / 3 - 60, height: 50 * 5)
+        menuTV.frame = CGRect(x: 20, y: view.frame.height / 2 - 50 * CGFloat(menuItems) / 2, width: view.frame.width * 2 / 3 - 60, height: 50 * CGFloat(menuItems))
         menuTV.backgroundColor = UIColor.clear
         
         logoIV.frame = CGRect(x: menuTV.frame.minX, y: menuTV.frame.minY - 150, width: menuTV.frame.width, height: 130)
@@ -57,31 +59,37 @@ extension SideMenuVC: UITableViewDelegate, UITableViewDataSource {
         switch indexPath.row {
         case 0:
             let cell = UITableViewCell()
-            cell.textLabel?.text = "My Bookings"
+            cell.textLabel?.text = "Home"
             cell.backgroundColor = UIColor.clear
             return cell
         case 1:
             let cell = UITableViewCell()
-            cell.textLabel?.text = "Promo Code"
-            let badge = UILabel()
-            badge.frame = CGRect(x: menuTV.frame.width - 50, y: 10, width: 30, height: 30)
-            badge.backgroundColor = UIColor.red
-            badge.layer.cornerRadius = 15
-            badge.layer.masksToBounds = true
-            badge.text = "1"
-            badge.textColor = UIColor.white
-            badge.textAlignment = .center
-            //            cell.contentView.addSubview(badge)
+            cell.textLabel?.text = "My Bookings"
             cell.backgroundColor = UIColor.clear
             return cell
         case 2:
             let cell = UITableViewCell()
-            cell.textLabel?.text = "Invite Friends"
+            cell.textLabel?.text = "Promo Code"
             cell.backgroundColor = UIColor.clear
             return cell
         case 3:
             let cell = UITableViewCell()
+            cell.textLabel?.text = "Invite Friends"
+            cell.backgroundColor = UIColor.clear
+            return cell
+        case 4:
+            let cell = UITableViewCell()
             cell.textLabel?.text = "Settings"
+            cell.backgroundColor = UIColor.clear
+            return cell
+        case 5:
+            let cell = UITableViewCell()
+            cell.textLabel?.text = "Facebook"
+            cell.backgroundColor = UIColor.clear
+            return cell
+        case 6:
+            let cell = UITableViewCell()
+            cell.textLabel?.text = "Instagram"
             cell.backgroundColor = UIColor.clear
             return cell
         default:
@@ -94,7 +102,7 @@ extension SideMenuVC: UITableViewDelegate, UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return menuItems
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -106,21 +114,41 @@ extension SideMenuVC: UITableViewDelegate, UITableViewDataSource {
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "homeNC") as? UINavigationController
             sideMenuController?.embed(centerViewController: vc!)
             break
-            
         case 1:
-            let vc = self.storyboard?.instantiateViewController(withIdentifier: "ApplicationsNC") as? UINavigationController
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "BookingsNC") as? UINavigationController
             sideMenuController?.embed(centerViewController: vc!)
             break
             
         case 2:
-            let vc = self.storyboard?.instantiateViewController(withIdentifier: "AboutNC") as? UINavigationController
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "PromotionsNC") as? UINavigationController
             sideMenuController?.embed(centerViewController: vc!)
             break
             
         case 3:
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "AboutNC") as? UINavigationController
+            sideMenuController?.embed(centerViewController: vc!)
+            break
+            
+        case 4:
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "ContactNC") as? UINavigationController
             //            self.navigationController?.pushViewController(vc!, animated: true)
             sideMenuController?.embed(centerViewController: vc!)
+            break
+        case 5:
+            
+            UIApplication.tryURL(urls: [
+                "fb://profile/mycoursesapp", // App
+                "http://www.facebook.com/mycoursesapp" // Website if app fails
+                ])
+            
+            break
+        case 6:
+            
+            UIApplication.tryURL(urls: [
+                "instagram://user?username=mycoursesapp", // App
+                "http://www.instagram.com/mycoursesapp" // Website if app fails
+                ])
+            
             break
             
         default:

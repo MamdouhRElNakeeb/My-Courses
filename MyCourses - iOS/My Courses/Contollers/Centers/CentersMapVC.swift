@@ -55,9 +55,7 @@ class CentersMapVC: UIViewController {
                     let info = subJson["info"].stringValue
                     let address = subJson["address"].stringValue
                     
-                    if let centerId = subJson["id"].int{
-                        id = centerId
-                    }
+                    let centerId = subJson["id"].intValue
                     
                     if let latitude = subJson["lat"].double{
                         lat = latitude
@@ -71,7 +69,7 @@ class CentersMapVC: UIViewController {
                     
                     if lat >= -85 && lat <= 85 && lon >= -85 && lon <= 85 {
                         
-                        self.items.append(Center.init(id: id, name: name, info: info, address: address, latitude: lat, longitude: lon, img: img))
+                        self.items.append(Center.init(id: centerId, name: name, info: info, address: address, latitude: lat, longitude: lon, img: img))
                         
                         let item = Center(position: CLLocationCoordinate2DMake(lat, lon), name: name)
                         self.clusterManager.add(item)
@@ -218,6 +216,17 @@ extension CentersMapVC: GMUClusterManagerDelegate, GMSMapViewDelegate{
     func clusterManager(_ clusterManager: GMUClusterManager, didTap clusterItem: GMUClusterItem) -> Bool {
         
         print("clusetItem Clicked \(clusterItem.position.latitude)")
+        
+        if let center = clusterItem as? Center{
+            
+            // TODO: Go to center profile
+            
+            print("centerID: \(center.id)")
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "CenterProfileVC") as! CenterProfileVC
+            vc.centerID = center.id
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+        
         
         return true
     }
