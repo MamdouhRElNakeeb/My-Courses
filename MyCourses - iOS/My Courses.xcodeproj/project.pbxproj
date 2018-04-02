@@ -15,6 +15,11 @@
 		33041BED2055A4C30087FF00 /* RecCourseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33041BEC2055A4C30087FF00 /* RecCourseCell.swift */; };
 		33041BEF20561C280087FF00 /* CoursesDiscoverTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33041BEE20561C260087FF00 /* CoursesDiscoverTVC.swift */; };
 		33041BF120561DEA0087FF00 /* CoursesDiscoverTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33041BF020561DEA0087FF00 /* CoursesDiscoverTVCell.swift */; };
+		3312C41F206FBE6700EB8BAC /* SubCoursesTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3312C41E206FBE6700EB8BAC /* SubCoursesTVC.swift */; };
+		3312C421206FBE7D00EB8BAC /* SubCourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3312C420206FBE7D00EB8BAC /* SubCourse.swift */; };
+		3312C423206FBF1C00EB8BAC /* StartingDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3312C422206FBF1C00EB8BAC /* StartingDate.swift */; };
+		3312C425206FC2CD00EB8BAC /* SubCourseTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3312C424206FC2CD00EB8BAC /* SubCourseTVCell.swift */; };
+		3312C4272070564B00EB8BAC /* CourseProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3312C4262070564B00EB8BAC /* CourseProfileVC.swift */; };
 		332C8C832048835B00BE2646 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332C8C822048835B00BE2646 /* AppDelegate.swift */; };
 		332C8C882048835B00BE2646 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 332C8C862048835B00BE2646 /* Main.storyboard */; };
 		332C8C8A2048835B00BE2646 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 332C8C892048835B00BE2646 /* Assets.xcassets */; };
@@ -52,6 +57,19 @@
 		33C343282066A3EC0079C189 /* GQTPointQuadTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C3430E2066A3EB0079C189 /* GQTPointQuadTree.m */; };
 		33C343292066A3EC0079C189 /* GQTPointQuadTreeChild.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C343102066A3EB0079C189 /* GQTPointQuadTreeChild.m */; };
 		33CD9EA4204DB18600579125 /* RegisterPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33CD9EA3204DB18600579125 /* RegisterPage.swift */; };
+		33E198C5207136DB0073328B /* CourseProfileVP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E198C4207136DB0073328B /* CourseProfileVP.swift */; };
+		33E198C72071536C0073328B /* CenterInfoTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E198C62071536C0073328B /* CenterInfoTVC.swift */; };
+		33E198C92071564D0073328B /* CenterInfoTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E198C82071564D0073328B /* CenterInfoTVCell.swift */; };
+		33E198CB20715A830073328B /* CenterProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E198CA20715A830073328B /* CenterProfileVC.swift */; };
+		33E198CD207169390073328B /* CenterProfileVP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E198CC207169390073328B /* CenterProfileVP.swift */; };
+		33E60EF0206D427F008EE27A /* Booking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E60EEF206D427F008EE27A /* Booking.swift */; };
+		33E91D632071B6E500DEFEEE /* BookCourseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E91D622071B6E500DEFEEE /* BookCourseVC.swift */; };
+		33E91D672071B76900DEFEEE /* BookCourseTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E91D662071B76900DEFEEE /* BookCourseTVC.swift */; };
+		33E91D692071B77C00DEFEEE /* BookCourseVP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E91D682071B77C00DEFEEE /* BookCourseVP.swift */; };
+		33E91D702071C6D000DEFEEE /* PromoCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E91D6F2071C6D000DEFEEE /* PromoCode.swift */; };
+		33E91D722071DFAA00DEFEEE /* PromotionsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E91D712071DFAA00DEFEEE /* PromotionsTVC.swift */; };
+		33E91D742071E15100DEFEEE /* PromotionTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E91D732071E15100DEFEEE /* PromotionTVCell.swift */; };
+		33E91D762071E9ED00DEFEEE /* QRScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E91D752071E9EC00DEFEEE /* QRScanner.swift */; };
 		33ED5968206823B5005F29F6 /* BookingsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ED5967206823B5005F29F6 /* BookingsTVC.swift */; };
 		33ED596A2068352A005F29F6 /* BookingTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ED59692068352A005F29F6 /* BookingTVCell.swift */; };
 		33FE11612048A2EA00A01923 /* LoginPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FE11602048A2EA00A01923 /* LoginPage.swift */; };
@@ -68,6 +86,11 @@
 		33041BEC2055A4C30087FF00 /* RecCourseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecCourseCell.swift; sourceTree = "<group>"; };
 		33041BEE20561C260087FF00 /* CoursesDiscoverTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesDiscoverTVC.swift; sourceTree = "<group>"; };
 		33041BF020561DEA0087FF00 /* CoursesDiscoverTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesDiscoverTVCell.swift; sourceTree = "<group>"; };
+		3312C41E206FBE6700EB8BAC /* SubCoursesTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubCoursesTVC.swift; sourceTree = "<group>"; };
+		3312C420206FBE7D00EB8BAC /* SubCourse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubCourse.swift; sourceTree = "<group>"; };
+		3312C422206FBF1C00EB8BAC /* StartingDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartingDate.swift; sourceTree = "<group>"; };
+		3312C424206FC2CD00EB8BAC /* SubCourseTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubCourseTVCell.swift; sourceTree = "<group>"; };
+		3312C4262070564B00EB8BAC /* CourseProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseProfileVC.swift; sourceTree = "<group>"; };
 		332C8C7F2048835B00BE2646 /* My Courses.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My Courses.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		332C8C822048835B00BE2646 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		332C8C872048835B00BE2646 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -148,6 +171,19 @@
 		33C343112066A3EB0079C189 /* GQTPointQuadTreeItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQTPointQuadTreeItem.h; sourceTree = "<group>"; };
 		33C3432B2066AE340079C189 /* My_Courses-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "My_Courses-Bridging-Header.h"; sourceTree = "<group>"; };
 		33CD9EA3204DB18600579125 /* RegisterPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPage.swift; sourceTree = "<group>"; };
+		33E198C4207136DB0073328B /* CourseProfileVP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseProfileVP.swift; sourceTree = "<group>"; };
+		33E198C62071536C0073328B /* CenterInfoTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterInfoTVC.swift; sourceTree = "<group>"; };
+		33E198C82071564D0073328B /* CenterInfoTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterInfoTVCell.swift; sourceTree = "<group>"; };
+		33E198CA20715A830073328B /* CenterProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterProfileVC.swift; sourceTree = "<group>"; };
+		33E198CC207169390073328B /* CenterProfileVP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterProfileVP.swift; sourceTree = "<group>"; };
+		33E60EEF206D427F008EE27A /* Booking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Booking.swift; sourceTree = "<group>"; };
+		33E91D622071B6E500DEFEEE /* BookCourseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCourseVC.swift; sourceTree = "<group>"; };
+		33E91D662071B76900DEFEEE /* BookCourseTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCourseTVC.swift; sourceTree = "<group>"; };
+		33E91D682071B77C00DEFEEE /* BookCourseVP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCourseVP.swift; sourceTree = "<group>"; };
+		33E91D6F2071C6D000DEFEEE /* PromoCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoCode.swift; sourceTree = "<group>"; };
+		33E91D712071DFAA00DEFEEE /* PromotionsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionsTVC.swift; sourceTree = "<group>"; };
+		33E91D732071E15100DEFEEE /* PromotionTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionTVCell.swift; sourceTree = "<group>"; };
+		33E91D752071E9EC00DEFEEE /* QRScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScanner.swift; sourceTree = "<group>"; };
 		33ED5967206823B5005F29F6 /* BookingsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingsTVC.swift; sourceTree = "<group>"; };
 		33ED59692068352A005F29F6 /* BookingTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingTVCell.swift; sourceTree = "<group>"; };
 		33FE11602048A2EA00A01923 /* LoginPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPage.swift; sourceTree = "<group>"; };
@@ -206,15 +242,12 @@
 			isa = PBXGroup;
 			children = (
 				33041BE2205546F00087FF00 /* SplashVC.swift */,
-				33041BE42055499C0087FF00 /* SideMenuVC.swift */,
-				33ED5967206823B5005F29F6 /* BookingsTVC.swift */,
-				332C8C952048846500BE2646 /* LoginMainVC.swift */,
-				33B465DB205443D400446F99 /* CompRegTVC.swift */,
 				33041BE6205563C80087FF00 /* HomeTVC.swift */,
-				33041BE82055A09B0087FF00 /* RecommendedCVC.swift */,
-				33041BEE20561C260087FF00 /* CoursesDiscoverTVC.swift */,
-				337C13E02056F603000E16CA /* CoursesTVC.swift */,
-				337C13E220570132000E16CA /* CentersMapVC.swift */,
+				33E91D6B2071B7A500DEFEEE /* Side Menu */,
+				33E91D6C2071B7B000DEFEEE /* Registration */,
+				33E91D6D2071B7C900DEFEEE /* Courses */,
+				33E91D6E2071B7F600DEFEEE /* Centers */,
+				33E91D6A2071B78700DEFEEE /* Book Course */,
 			);
 			path = Contollers;
 			sourceTree = "<group>";
@@ -236,6 +269,10 @@
 				33B465E020544B0E00446F99 /* Category.swift */,
 				33041BEA2055A3B30087FF00 /* Course.swift */,
 				337C13E420570D98000E16CA /* Center.swift */,
+				33E60EEF206D427F008EE27A /* Booking.swift */,
+				3312C420206FBE7D00EB8BAC /* SubCourse.swift */,
+				3312C422206FBF1C00EB8BAC /* StartingDate.swift */,
+				33E91D6F2071C6D000DEFEEE /* PromoCode.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -366,6 +403,60 @@
 			path = QuadTree;
 			sourceTree = "<group>";
 		};
+		33E91D6A2071B78700DEFEEE /* Book Course */ = {
+			isa = PBXGroup;
+			children = (
+				33E91D622071B6E500DEFEEE /* BookCourseVC.swift */,
+				33E91D682071B77C00DEFEEE /* BookCourseVP.swift */,
+				33E91D662071B76900DEFEEE /* BookCourseTVC.swift */,
+			);
+			path = "Book Course";
+			sourceTree = "<group>";
+		};
+		33E91D6B2071B7A500DEFEEE /* Side Menu */ = {
+			isa = PBXGroup;
+			children = (
+				33041BE42055499C0087FF00 /* SideMenuVC.swift */,
+				33ED5967206823B5005F29F6 /* BookingsTVC.swift */,
+				33E91D712071DFAA00DEFEEE /* PromotionsTVC.swift */,
+				33E91D752071E9EC00DEFEEE /* QRScanner.swift */,
+			);
+			path = "Side Menu";
+			sourceTree = "<group>";
+		};
+		33E91D6C2071B7B000DEFEEE /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+				332C8C952048846500BE2646 /* LoginMainVC.swift */,
+				33B465DB205443D400446F99 /* CompRegTVC.swift */,
+			);
+			path = Registration;
+			sourceTree = "<group>";
+		};
+		33E91D6D2071B7C900DEFEEE /* Courses */ = {
+			isa = PBXGroup;
+			children = (
+				33041BE82055A09B0087FF00 /* RecommendedCVC.swift */,
+				33041BEE20561C260087FF00 /* CoursesDiscoverTVC.swift */,
+				337C13E02056F603000E16CA /* CoursesTVC.swift */,
+				3312C4262070564B00EB8BAC /* CourseProfileVC.swift */,
+				33E198C4207136DB0073328B /* CourseProfileVP.swift */,
+			);
+			path = Courses;
+			sourceTree = "<group>";
+		};
+		33E91D6E2071B7F600DEFEEE /* Centers */ = {
+			isa = PBXGroup;
+			children = (
+				337C13E220570132000E16CA /* CentersMapVC.swift */,
+				33E198CA20715A830073328B /* CenterProfileVC.swift */,
+				33E198CC207169390073328B /* CenterProfileVP.swift */,
+				33E198C62071536C0073328B /* CenterInfoTVC.swift */,
+				3312C41E206FBE6700EB8BAC /* SubCoursesTVC.swift */,
+			);
+			path = Centers;
+			sourceTree = "<group>";
+		};
 		33FE115F2048A2CD00A01923 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -374,6 +465,9 @@
 				33041BEC2055A4C30087FF00 /* RecCourseCell.swift */,
 				33041BF020561DEA0087FF00 /* CoursesDiscoverTVCell.swift */,
 				33ED59692068352A005F29F6 /* BookingTVCell.swift */,
+				3312C424206FC2CD00EB8BAC /* SubCourseTVCell.swift */,
+				33E198C82071564D0073328B /* CenterInfoTVCell.swift */,
+				33E91D732071E15100DEFEEE /* PromotionTVCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -482,6 +576,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-My Courses/Pods-My Courses-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AutoInsetter/AutoInsetter.framework",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
@@ -494,10 +589,12 @@
 				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
-				"${BUILT_PRODUCTS_DIR}/Parchment/Parchment.framework",
+				"${BUILT_PRODUCTS_DIR}/Pageboy/Pageboy.framework",
+				"${BUILT_PRODUCTS_DIR}/QRCodeReader.swift/QRCodeReader.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SideMenuController/SideMenuController.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/Tabman/Tabman.framework",
 				"${PODS_ROOT}/TwitterCore/iOS/TwitterCore.framework",
 				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework",
 				"${BUILT_PRODUCTS_DIR}/libwebp/libwebp.framework",
@@ -505,6 +602,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AutoInsetter.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DropDown.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
@@ -517,10 +615,12 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Parchment.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Pageboy.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QRCodeReader.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenuController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Tabman.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/libwebp.framework",
@@ -576,6 +676,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33E91D722071DFAA00DEFEEE /* PromotionsTVC.swift in Sources */,
+				33E198CB20715A830073328B /* CenterProfileVC.swift in Sources */,
 				33ED596A2068352A005F29F6 /* BookingTVCell.swift in Sources */,
 				337C13E12056F603000E16CA /* CoursesTVC.swift in Sources */,
 				33041BEB2055A3B30087FF00 /* Course.swift in Sources */,
@@ -583,6 +685,7 @@
 				33C343152066A3EC0079C189 /* GMUGridBasedClusterAlgorithm.m in Sources */,
 				33B7938B2053EF1A00E84032 /* Consts.swift in Sources */,
 				33041BF120561DEA0087FF00 /* CoursesDiscoverTVCell.swift in Sources */,
+				33E198CD207169390073328B /* CenterProfileVP.swift in Sources */,
 				33041BED2055A4C30087FF00 /* RecCourseCell.swift in Sources */,
 				33B465DC205443D400446F99 /* CompRegTVC.swift in Sources */,
 				33C343122066A3EC0079C189 /* GMUGradient.m in Sources */,
@@ -590,8 +693,13 @@
 				33C343162066A3EC0079C189 /* GMUNonHierarchicalDistanceBasedAlgorithm.m in Sources */,
 				33C343292066A3EC0079C189 /* GQTPointQuadTreeChild.m in Sources */,
 				33FE11612048A2EA00A01923 /* LoginPage.swift in Sources */,
+				33E91D742071E15100DEFEEE /* PromotionTVCell.swift in Sources */,
+				33E91D762071E9ED00DEFEEE /* QRScanner.swift in Sources */,
 				337C13E320570132000E16CA /* CentersMapVC.swift in Sources */,
 				33C3431F2066A3EC0079C189 /* GMUKMLParser.m in Sources */,
+				3312C423206FBF1C00EB8BAC /* StartingDate.swift in Sources */,
+				33E198C5207136DB0073328B /* CourseProfileVP.swift in Sources */,
+				33E198C72071536C0073328B /* CenterInfoTVC.swift in Sources */,
 				33041BE7205563C80087FF00 /* HomeTVC.swift in Sources */,
 				33041BE52055499C0087FF00 /* SideMenuVC.swift in Sources */,
 				33041BE92055A09B0087FF00 /* RecommendedCVC.swift in Sources */,
@@ -600,6 +708,7 @@
 				332C8C9920488C5B00BE2646 /* Extensions.swift in Sources */,
 				33C343212066A3EC0079C189 /* GMUGeometryCollection.m in Sources */,
 				33C343242066A3EC0079C189 /* GMUPlacemark.m in Sources */,
+				3312C425206FC2CD00EB8BAC /* SubCourseTVCell.swift in Sources */,
 				332C8C962048846500BE2646 /* LoginMainVC.swift in Sources */,
 				33C3431C2066A3EC0079C189 /* GMUDefaultClusterRenderer.m in Sources */,
 				33C343132066A3EC0079C189 /* GMUHeatmapTileLayer.m in Sources */,
@@ -608,19 +717,28 @@
 				337C13E520570D98000E16CA /* Center.swift in Sources */,
 				33C343172066A3EC0079C189 /* GMUSimpleClusterAlgorithm.m in Sources */,
 				33C3431A2066A3EC0079C189 /* GMUStaticCluster.m in Sources */,
+				3312C41F206FBE6700EB8BAC /* SubCoursesTVC.swift in Sources */,
 				33C343282066A3EC0079C189 /* GQTPointQuadTree.m in Sources */,
 				33C343142066A3EC0079C189 /* GMUWeightedLatLng.m in Sources */,
 				33C343202066A3EC0079C189 /* GMUFeature.m in Sources */,
 				33C343272066A3EC0079C189 /* GMUStyle.m in Sources */,
+				3312C421206FBE7D00EB8BAC /* SubCourse.swift in Sources */,
 				33C343262066A3EC0079C189 /* GMUPolygon.m in Sources */,
+				33E91D632071B6E500DEFEEE /* BookCourseVC.swift in Sources */,
+				33E91D702071C6D000DEFEEE /* PromoCode.swift in Sources */,
 				33C3431D2066A3EC0079C189 /* GMUGeoJSONParser.m in Sources */,
+				33E91D692071B77C00DEFEEE /* BookCourseVP.swift in Sources */,
 				33ED5968206823B5005F29F6 /* BookingsTVC.swift in Sources */,
 				33C343222066A3EC0079C189 /* GMUGroundOverlay.m in Sources */,
 				33C3431E2066A3EC0079C189 /* GMUGeometryRenderer.m in Sources */,
+				3312C4272070564B00EB8BAC /* CourseProfileVC.swift in Sources */,
+				33E198C92071564D0073328B /* CenterInfoTVCell.swift in Sources */,
 				33C343192066A3EC0079C189 /* GMUClusterManager.m in Sources */,
 				33041BE3205546F00087FF00 /* SplashVC.swift in Sources */,
+				33E91D672071B76900DEFEEE /* BookCourseTVC.swift in Sources */,
 				33C343232066A3EC0079C189 /* GMULineString.m in Sources */,
 				33C3431B2066A3EC0079C189 /* GMUDefaultClusterIconGenerator.m in Sources */,
+				33E60EF0206D427F008EE27A /* Booking.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
