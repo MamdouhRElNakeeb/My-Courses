@@ -22,8 +22,23 @@ class HomeTVC: UITableViewController {
     @IBOutlet weak var centersIV: UIImageView!
     @IBOutlet weak var cenGrad: GradientView!
     
+    var searchController = UISearchController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Large Navigation Bar with Search Bar
+        self.navigationController?.navigationBar.prefersLargeTitles = false
+        self.navigationController?.navigationItem.largeTitleDisplayMode = .never
+        searchController = UISearchController(searchResultsController: nil)
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.delegate = self
+        
+        searchController.searchBar.textColor = UIColor.white
+        
+        navigationItem.searchController = searchController
+        navigationItem.hidesSearchBarWhenScrolling = false
         
         setupViews()
     }
@@ -68,6 +83,7 @@ class HomeTVC: UITableViewController {
         switch indexPath.row {
         case 0:
             let vc =  self.storyboard?.instantiateViewController(withIdentifier: "RecommendedCVC") as! RecommendedCVC
+            vc.url = Consts.RECOMMENDED + "\(UserDefaults.standard.integer(forKey: "id"))/"
             self.navigationController?.pushViewController(vc, animated: true)
             break
         case 1:
@@ -93,4 +109,20 @@ class HomeTVC: UITableViewController {
         
     }
 
+}
+
+extension HomeTVC: UISearchResultsUpdating, UISearchBarDelegate {
+    // MARK: - UISearchResultsUpdating Delegate
+    func updateSearchResults(for searchController: UISearchController) {
+        //
+        print(searchController.searchBar.text!)
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        print(searchBar.text!)
+        // TODO: Open search results
+        let vc =  self.storyboard?.instantiateViewController(withIdentifier: "RecommendedCVC") as! RecommendedCVC
+        vc.url = Consts.SEARCH + searchBar.text! + "/"
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 }
