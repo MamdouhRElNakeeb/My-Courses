@@ -12,7 +12,7 @@ import QRCodeReader
 import Alamofire
 import SwiftyJSON
 
-class QRScanner: UIViewController, QRCodeReaderViewControllerDelegate {
+class QRScanner: UIViewController, QRCodeReaderViewControllerDelegate, UIGestureRecognizerDelegate {
 
     @IBOutlet weak var promoCodeTF: UITextField!
     @IBOutlet weak var addPromoCodeBtn: UIButton!
@@ -42,6 +42,8 @@ class QRScanner: UIViewController, QRCodeReaderViewControllerDelegate {
         
         addPromoCodeBtn.layer.cornerRadius = 15
         
+        promoCodeTF.delegate = self
+        
         guard checkScanPermissions(), !reader.isRunning else { return }
 
         reader.didFindCode = { result in
@@ -50,8 +52,19 @@ class QRScanner: UIViewController, QRCodeReaderViewControllerDelegate {
         }
         
         reader.startScanning()
+        
+        let hideKeyboard = UITapGestureRecognizer(target: self, action: #selector(self.hideKeyboard(_:)))
+        hideKeyboard.numberOfTapsRequired = 1
+        self.view.addGestureRecognizer(hideKeyboard)
+    }
+    
+    @objc func hideKeyboard(_ recognizer: UIGestureRecognizer){
+        view.endEditing(true)
     }
 
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
     
     func checkPromoCode(code: String){
         
@@ -68,7 +81,7 @@ class QRScanner: UIViewController, QRCodeReaderViewControllerDelegate {
                 if let discount = json["discount"].int{
                     
                     let codeID = json["id"].intValue
-                    self.addPromoToUser(codeID: codeID)
+                    self.addPromoToUser(codeID: codeID, discount: discount)
                     
                     let alert = UIAlertController(
                         title: "Promo Code",
@@ -77,7 +90,7 @@ class QRScanner: UIViewController, QRCodeReaderViewControllerDelegate {
                     )
                     alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
                     
-                    self.present(alert, animated: true, completion: nil)
+//                    self.present(alert, animated: true, completion: nil)
                     
                 }
                 else if let errors = json["errors"].string{
@@ -104,7 +117,7 @@ class QRScanner: UIViewController, QRCodeReaderViewControllerDelegate {
         
     }
     
-    func addPromoToUser(codeID: Int){
+    func addPromoToUser(codeID: Int, discount: Int){
         
         let url = Consts.PROMO_USER + "\(UserDefaults.standard.integer(forKey: "id"))/"
         
@@ -118,29 +131,42 @@ class QRScanner: UIViewController, QRCodeReaderViewControllerDelegate {
             "Content-Type" :"application/json"
         ]
         
-        Alamofire.request(url, method: .post, parameters: params)
-            .responseString{
+        var request = URLRequest(url: URL(string: url)!)
+        request.httpMethod = HTTPMethod.post.rawValue
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        let postString = "{\"promoCode\":\"\(codeID)\"}"
+        
+        print(postString)
+        
+        request.httpBody = postString.data(using: .utf8)
+        
+        Alamofire.request(request).responseJSON { (response) in
             
-            response in
-                print(response)
+            print(response)
             
             switch response.result{
             case .success(let value):
                 let json = JSON(value)
                 print("JSON: \(json)")
                 
-                if let created = json["created"].bool{
+                if let created = json["created"].string{
                     
-                    if created{
+                    print(created)
+                    if created.toBool(){
                         
-                        _ = self.navigationController?.popViewController(animated: true)
                         
                         let alert = UIAlertController(
                             title: "QRCodeReader",
-                            message: "Promo Code is added successfully",
+                            message: "Promo Code is added successfully. /n \(discount)% discount",
                             preferredStyle: .alert
                         )
-                        alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                        alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: { (action) in
+                            
+                            
+                            _ = self.navigationController?.popViewController(animated: true)
+                            
+                        }))
                         
                         self.present(alert, animated: true, completion: nil)
                     }
@@ -283,5 +309,31 @@ class QRScanner: UIViewController, QRCodeReaderViewControllerDelegate {
         dismiss(animated: true, completion: nil)
     }
 
+}
 
+extension QRScanner: UITextFieldDelegate{
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        textField.becomeFirstResponder()
+        
+        let keyboardHeight : CGFloat = 250
+        
+        UIView.beginAnimations( "animateView", context: nil)
+        
+        var frame : CGRect = self.view.frame
+        
+        frame.origin.y = -keyboardHeight
+        self.view.frame = frame
+        UIView.commitAnimations()
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        
+        UIView.beginAnimations( "animateView", context: nil)
+        var frame : CGRect = self.view.frame
+        frame.origin.y = 0
+        self.view.frame = frame
+        UIView.commitAnimations()
+    }
+    
 }

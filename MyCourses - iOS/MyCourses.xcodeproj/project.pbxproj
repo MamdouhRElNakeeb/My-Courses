@@ -7,6 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3300BC022073548D007A1967 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3300BC012073548D007A1967 /* libz.tbd */; };
+		3300BC04207354A1007A1967 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3300BC03207354A1007A1967 /* Accelerate.framework */; };
+		3300BC06207354AC007A1967 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3300BC05207354AC007A1967 /* CoreData.framework */; };
+		3300BC08207354B7007A1967 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3300BC07207354B7007A1967 /* CoreGraphics.framework */; };
+		3300BC0A207354BD007A1967 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3300BC09207354BD007A1967 /* CoreImage.framework */; };
+		3300BC0C207354CE007A1967 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3300BC0B207354CE007A1967 /* CoreLocation.framework */; };
+		3300BC0E207354D4007A1967 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3300BC0D207354D4007A1967 /* CoreTelephony.framework */; };
+		3300BC10207354E1007A1967 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3300BC0F207354E1007A1967 /* CoreText.framework */; };
+		3300BC12207354E8007A1967 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3300BC11207354E8007A1967 /* GLKit.framework */; };
+		3300BC14207354F6007A1967 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3300BC13207354F6007A1967 /* ImageIO.framework */; };
+		3300BC1620735503007A1967 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3300BC1520735503007A1967 /* libc++.tbd */; };
+		3300BC182073550E007A1967 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3300BC172073550E007A1967 /* OpenGLES.framework */; };
+		3300BC1A20735518007A1967 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3300BC1920735518007A1967 /* QuartzCore.framework */; };
+		3300BC1C20735520007A1967 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3300BC1B20735520007A1967 /* SystemConfiguration.framework */; };
+		3300BC1E20735525007A1967 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3300BC1D20735525007A1967 /* UIKit.framework */; };
+		3300BC1F20735889007A1967 /* GMUGridBasedClusterAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C342D72066A3EB0079C189 /* GMUGridBasedClusterAlgorithm.m */; };
+		3300BC2020735889007A1967 /* GMUNonHierarchicalDistanceBasedAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C342D92066A3EB0079C189 /* GMUNonHierarchicalDistanceBasedAlgorithm.m */; };
+		3300BC2120735889007A1967 /* GMUSimpleClusterAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C342DB2066A3EB0079C189 /* GMUSimpleClusterAlgorithm.m */; };
+		3300BC2220735889007A1967 /* GMUWrappingDictionaryKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C342DD2066A3EB0079C189 /* GMUWrappingDictionaryKey.m */; };
+		3300BC2320735889007A1967 /* GMUClusterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C342E22066A3EB0079C189 /* GMUClusterManager.m */; };
+		3300BC2420735889007A1967 /* GMUStaticCluster.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C342E52066A3EB0079C189 /* GMUStaticCluster.m */; };
+		3300BC2520735889007A1967 /* GMUDefaultClusterIconGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C342EB2066A3EB0079C189 /* GMUDefaultClusterIconGenerator.m */; };
+		3300BC2620735889007A1967 /* GMUDefaultClusterRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C342EE2066A3EB0079C189 /* GMUDefaultClusterRenderer.m */; };
+		3300BC2720735A0D007A1967 /* GQTPointQuadTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C3430E2066A3EB0079C189 /* GQTPointQuadTree.m */; };
+		3300BC2820735A0D007A1967 /* GQTPointQuadTreeChild.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C343102066A3EB0079C189 /* GQTPointQuadTreeChild.m */; };
+		3300BC2920735A17007A1967 /* GMUGradient.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C342CE2066A3EB0079C189 /* GMUGradient.m */; };
+		3300BC2A20735A17007A1967 /* GMUHeatmapTileLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C342D02066A3EB0079C189 /* GMUHeatmapTileLayer.m */; };
+		3300BC2B20735A17007A1967 /* GMUWeightedLatLng.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C342D22066A3EB0079C189 /* GMUWeightedLatLng.m */; };
 		33041BE3205546F00087FF00 /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33041BE2205546F00087FF00 /* SplashVC.swift */; };
 		33041BE52055499C0087FF00 /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33041BE42055499C0087FF00 /* SideMenuVC.swift */; };
 		33041BE7205563C80087FF00 /* HomeTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33041BE6205563C80087FF00 /* HomeTVC.swift */; };
@@ -15,6 +43,7 @@
 		33041BED2055A4C30087FF00 /* RecCourseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33041BEC2055A4C30087FF00 /* RecCourseCell.swift */; };
 		33041BEF20561C280087FF00 /* CoursesDiscoverTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33041BEE20561C260087FF00 /* CoursesDiscoverTVC.swift */; };
 		33041BF120561DEA0087FF00 /* CoursesDiscoverTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33041BF020561DEA0087FF00 /* CoursesDiscoverTVCell.swift */; };
+		33075BB32073099C0078CCE5 /* SettingsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33075BB22073099C0078CCE5 /* SettingsTVC.swift */; };
 		3312C41F206FBE6700EB8BAC /* SubCoursesTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3312C41E206FBE6700EB8BAC /* SubCoursesTVC.swift */; };
 		3312C421206FBE7D00EB8BAC /* SubCourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3312C420206FBE7D00EB8BAC /* SubCourse.swift */; };
 		3312C423206FBF1C00EB8BAC /* StartingDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3312C422206FBF1C00EB8BAC /* StartingDate.swift */; };
@@ -26,36 +55,13 @@
 		332C8C8D2048835B00BE2646 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 332C8C8B2048835B00BE2646 /* LaunchScreen.storyboard */; };
 		332C8C962048846500BE2646 /* LoginMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332C8C952048846500BE2646 /* LoginMainVC.swift */; };
 		332C8C9920488C5B00BE2646 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332C8C9820488C5700BE2646 /* Extensions.swift */; };
+		336C6592207962760086C1E2 /* localized.strings in Resources */ = {isa = PBXBuildFile; fileRef = 336C659020795DC30086C1E2 /* localized.strings */; };
 		337C13E12056F603000E16CA /* CoursesTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337C13E02056F603000E16CA /* CoursesTVC.swift */; };
 		337C13E320570132000E16CA /* CentersMapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337C13E220570132000E16CA /* CentersMapVC.swift */; };
 		337C13E520570D98000E16CA /* Center.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337C13E420570D98000E16CA /* Center.swift */; };
 		33B465DC205443D400446F99 /* CompRegTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B465DB205443D400446F99 /* CompRegTVC.swift */; };
 		33B465E120544B0E00446F99 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B465E020544B0E00446F99 /* Category.swift */; };
 		33B7938B2053EF1A00E84032 /* Consts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B7938A2053EF1A00E84032 /* Consts.swift */; };
-		33C343122066A3EC0079C189 /* GMUGradient.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C342CE2066A3EB0079C189 /* GMUGradient.m */; };
-		33C343132066A3EC0079C189 /* GMUHeatmapTileLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C342D02066A3EB0079C189 /* GMUHeatmapTileLayer.m */; };
-		33C343142066A3EC0079C189 /* GMUWeightedLatLng.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C342D22066A3EB0079C189 /* GMUWeightedLatLng.m */; };
-		33C343152066A3EC0079C189 /* GMUGridBasedClusterAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C342D72066A3EB0079C189 /* GMUGridBasedClusterAlgorithm.m */; };
-		33C343162066A3EC0079C189 /* GMUNonHierarchicalDistanceBasedAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C342D92066A3EB0079C189 /* GMUNonHierarchicalDistanceBasedAlgorithm.m */; };
-		33C343172066A3EC0079C189 /* GMUSimpleClusterAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C342DB2066A3EB0079C189 /* GMUSimpleClusterAlgorithm.m */; };
-		33C343182066A3EC0079C189 /* GMUWrappingDictionaryKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C342DD2066A3EB0079C189 /* GMUWrappingDictionaryKey.m */; };
-		33C343192066A3EC0079C189 /* GMUClusterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C342E22066A3EB0079C189 /* GMUClusterManager.m */; };
-		33C3431A2066A3EC0079C189 /* GMUStaticCluster.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C342E52066A3EB0079C189 /* GMUStaticCluster.m */; };
-		33C3431B2066A3EC0079C189 /* GMUDefaultClusterIconGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C342EB2066A3EB0079C189 /* GMUDefaultClusterIconGenerator.m */; };
-		33C3431C2066A3EC0079C189 /* GMUDefaultClusterRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C342EE2066A3EB0079C189 /* GMUDefaultClusterRenderer.m */; };
-		33C3431D2066A3EC0079C189 /* GMUGeoJSONParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C342F12066A3EB0079C189 /* GMUGeoJSONParser.m */; };
-		33C3431E2066A3EC0079C189 /* GMUGeometryRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C342F42066A3EB0079C189 /* GMUGeometryRenderer.m */; };
-		33C3431F2066A3EC0079C189 /* GMUKMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C342F62066A3EB0079C189 /* GMUKMLParser.m */; };
-		33C343202066A3EC0079C189 /* GMUFeature.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C342F92066A3EB0079C189 /* GMUFeature.m */; };
-		33C343212066A3EC0079C189 /* GMUGeometryCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C342FC2066A3EB0079C189 /* GMUGeometryCollection.m */; };
-		33C343222066A3EC0079C189 /* GMUGroundOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C342FF2066A3EB0079C189 /* GMUGroundOverlay.m */; };
-		33C343232066A3EC0079C189 /* GMULineString.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C343012066A3EB0079C189 /* GMULineString.m */; };
-		33C343242066A3EC0079C189 /* GMUPlacemark.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C343032066A3EB0079C189 /* GMUPlacemark.m */; };
-		33C343252066A3EC0079C189 /* GMUPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C343052066A3EB0079C189 /* GMUPoint.m */; };
-		33C343262066A3EC0079C189 /* GMUPolygon.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C343072066A3EB0079C189 /* GMUPolygon.m */; };
-		33C343272066A3EC0079C189 /* GMUStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C343092066A3EB0079C189 /* GMUStyle.m */; };
-		33C343282066A3EC0079C189 /* GQTPointQuadTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C3430E2066A3EB0079C189 /* GQTPointQuadTree.m */; };
-		33C343292066A3EC0079C189 /* GQTPointQuadTreeChild.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C343102066A3EB0079C189 /* GQTPointQuadTreeChild.m */; };
 		33CD9EA4204DB18600579125 /* RegisterPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33CD9EA3204DB18600579125 /* RegisterPage.swift */; };
 		33E198C5207136DB0073328B /* CourseProfileVP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E198C4207136DB0073328B /* CourseProfileVP.swift */; };
 		33E198C72071536C0073328B /* CenterInfoTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E198C62071536C0073328B /* CenterInfoTVC.swift */; };
@@ -73,11 +79,26 @@
 		33ED5968206823B5005F29F6 /* BookingsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ED5967206823B5005F29F6 /* BookingsTVC.swift */; };
 		33ED596A2068352A005F29F6 /* BookingTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ED59692068352A005F29F6 /* BookingTVCell.swift */; };
 		33FE11612048A2EA00A01923 /* LoginPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FE11602048A2EA00A01923 /* LoginPage.swift */; };
-		924028D9CA51EDD89287472C /* Pods_My_Courses.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AE40D41259753C29E45E99B /* Pods_My_Courses.framework */; };
+		89EF9C3A20D5FF927B82732C /* Pods_MyCourses.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6744C611725DF4C39C441494 /* Pods_MyCourses.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0AE40D41259753C29E45E99B /* Pods_My_Courses.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_My_Courses.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3300BC012073548D007A1967 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		3300BC03207354A1007A1967 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		3300BC05207354AC007A1967 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		3300BC07207354B7007A1967 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3300BC09207354BD007A1967 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		3300BC0B207354CE007A1967 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		3300BC0D207354D4007A1967 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		3300BC0F207354E1007A1967 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		3300BC11207354E8007A1967 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		3300BC13207354F6007A1967 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		3300BC1520735503007A1967 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		3300BC172073550E007A1967 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		3300BC1920735518007A1967 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		3300BC1B20735520007A1967 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		3300BC1D20735525007A1967 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		33041BE2205546F00087FF00 /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
 		33041BE42055499C0087FF00 /* SideMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuVC.swift; sourceTree = "<group>"; };
 		33041BE6205563C80087FF00 /* HomeTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTVC.swift; sourceTree = "<group>"; };
@@ -86,12 +107,13 @@
 		33041BEC2055A4C30087FF00 /* RecCourseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecCourseCell.swift; sourceTree = "<group>"; };
 		33041BEE20561C260087FF00 /* CoursesDiscoverTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesDiscoverTVC.swift; sourceTree = "<group>"; };
 		33041BF020561DEA0087FF00 /* CoursesDiscoverTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesDiscoverTVCell.swift; sourceTree = "<group>"; };
+		33075BB22073099C0078CCE5 /* SettingsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTVC.swift; sourceTree = "<group>"; };
 		3312C41E206FBE6700EB8BAC /* SubCoursesTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubCoursesTVC.swift; sourceTree = "<group>"; };
 		3312C420206FBE7D00EB8BAC /* SubCourse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubCourse.swift; sourceTree = "<group>"; };
 		3312C422206FBF1C00EB8BAC /* StartingDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartingDate.swift; sourceTree = "<group>"; };
 		3312C424206FC2CD00EB8BAC /* SubCourseTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubCourseTVCell.swift; sourceTree = "<group>"; };
 		3312C4262070564B00EB8BAC /* CourseProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseProfileVC.swift; sourceTree = "<group>"; };
-		332C8C7F2048835B00BE2646 /* My Courses.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My Courses.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		332C8C7F2048835B00BE2646 /* MyCourses.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyCourses.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		332C8C822048835B00BE2646 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		332C8C872048835B00BE2646 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		332C8C892048835B00BE2646 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -99,6 +121,10 @@
 		332C8C8E2048835B00BE2646 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		332C8C952048846500BE2646 /* LoginMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginMainVC.swift; sourceTree = "<group>"; };
 		332C8C9820488C5700BE2646 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		336C658820794A110086C1E2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		336C658A20794A750086C1E2 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
+		336C658F20795DC30086C1E2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/localized.strings; sourceTree = "<group>"; };
+		336C659120795DCD0086C1E2 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/localized.strings; sourceTree = "<group>"; };
 		337C13E02056F603000E16CA /* CoursesTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesTVC.swift; sourceTree = "<group>"; };
 		337C13E220570132000E16CA /* CentersMapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CentersMapVC.swift; sourceTree = "<group>"; };
 		337C13E420570D98000E16CA /* Center.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Center.swift; sourceTree = "<group>"; };
@@ -169,7 +195,7 @@
 		33C3430F2066A3EB0079C189 /* GQTPointQuadTreeChild.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQTPointQuadTreeChild.h; sourceTree = "<group>"; };
 		33C343102066A3EB0079C189 /* GQTPointQuadTreeChild.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQTPointQuadTreeChild.m; sourceTree = "<group>"; };
 		33C343112066A3EB0079C189 /* GQTPointQuadTreeItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQTPointQuadTreeItem.h; sourceTree = "<group>"; };
-		33C3432B2066AE340079C189 /* My_Courses-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "My_Courses-Bridging-Header.h"; sourceTree = "<group>"; };
+		33C3432B2066AE340079C189 /* MyCourses-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyCourses-Bridging-Header.h"; sourceTree = "<group>"; };
 		33CD9EA3204DB18600579125 /* RegisterPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPage.swift; sourceTree = "<group>"; };
 		33E198C4207136DB0073328B /* CourseProfileVP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseProfileVP.swift; sourceTree = "<group>"; };
 		33E198C62071536C0073328B /* CenterInfoTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterInfoTVC.swift; sourceTree = "<group>"; };
@@ -189,6 +215,9 @@
 		33FE11602048A2EA00A01923 /* LoginPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPage.swift; sourceTree = "<group>"; };
 		5D04678EA58C0DF83244740D /* Pods-My Courses.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-My Courses.release.xcconfig"; path = "Pods/Target Support Files/Pods-My Courses/Pods-My Courses.release.xcconfig"; sourceTree = "<group>"; };
 		671BE70EF92A619FB40277CD /* Pods-My Courses.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-My Courses.debug.xcconfig"; path = "Pods/Target Support Files/Pods-My Courses/Pods-My Courses.debug.xcconfig"; sourceTree = "<group>"; };
+		6744C611725DF4C39C441494 /* Pods_MyCourses.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyCourses.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A618C8BB53319A6122C54AB6 /* Pods-MyCourses.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCourses.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyCourses/Pods-MyCourses.release.xcconfig"; sourceTree = "<group>"; };
+		BE053EC89A3C4784FC5CC53F /* Pods-MyCourses.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCourses.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyCourses/Pods-MyCourses.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,7 +225,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				924028D9CA51EDD89287472C /* Pods_My_Courses.framework in Frameworks */,
+				3300BC1E20735525007A1967 /* UIKit.framework in Frameworks */,
+				3300BC1C20735520007A1967 /* SystemConfiguration.framework in Frameworks */,
+				3300BC1A20735518007A1967 /* QuartzCore.framework in Frameworks */,
+				3300BC182073550E007A1967 /* OpenGLES.framework in Frameworks */,
+				3300BC1620735503007A1967 /* libc++.tbd in Frameworks */,
+				3300BC14207354F6007A1967 /* ImageIO.framework in Frameworks */,
+				3300BC12207354E8007A1967 /* GLKit.framework in Frameworks */,
+				3300BC10207354E1007A1967 /* CoreText.framework in Frameworks */,
+				3300BC0E207354D4007A1967 /* CoreTelephony.framework in Frameworks */,
+				3300BC0C207354CE007A1967 /* CoreLocation.framework in Frameworks */,
+				3300BC0A207354BD007A1967 /* CoreImage.framework in Frameworks */,
+				3300BC08207354B7007A1967 /* CoreGraphics.framework in Frameworks */,
+				3300BC06207354AC007A1967 /* CoreData.framework in Frameworks */,
+				3300BC04207354A1007A1967 /* Accelerate.framework in Frameworks */,
+				3300BC022073548D007A1967 /* libz.tbd in Frameworks */,
+				89EF9C3A20D5FF927B82732C /* Pods_MyCourses.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,7 +260,7 @@
 		332C8C802048835B00BE2646 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				332C8C7F2048835B00BE2646 /* My Courses.app */,
+				332C8C7F2048835B00BE2646 /* MyCourses.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -255,7 +299,7 @@
 		332C8C9720488C4100BE2646 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				33C3432B2066AE340079C189 /* My_Courses-Bridging-Header.h */,
+				336C659020795DC30086C1E2 /* localized.strings */,
 				33C342C32066A3530079C189 /* Google-Maps-iOS-Utils */,
 				332C8C9820488C5700BE2646 /* Extensions.swift */,
 				33B7938A2053EF1A00E84032 /* Consts.swift */,
@@ -280,6 +324,39 @@
 		33C342C32066A3530079C189 /* Google-Maps-iOS-Utils */ = {
 			isa = PBXGroup;
 			children = (
+				33C3432B2066AE340079C189 /* MyCourses-Bridging-Header.h */,
+				33C342DE2066A3EB0079C189 /* GMUCluster.h */,
+				33C342DF2066A3EB0079C189 /* GMUClusterItem.h */,
+				33C342E02066A3EB0079C189 /* GMUClusterManager+Testing.h */,
+				33C342E12066A3EB0079C189 /* GMUClusterManager.h */,
+				33C342E22066A3EB0079C189 /* GMUClusterManager.m */,
+				33C342E32066A3EB0079C189 /* GMUMarkerClustering.h */,
+				33C342E42066A3EB0079C189 /* GMUStaticCluster.h */,
+				33C342E52066A3EB0079C189 /* GMUStaticCluster.m */,
+				33C342E72066A3EB0079C189 /* GMUClusterIconGenerator.h */,
+				33C342E82066A3EB0079C189 /* GMUClusterRenderer.h */,
+				33C342E92066A3EB0079C189 /* GMUDefaultClusterIconGenerator+Testing.h */,
+				33C342EA2066A3EB0079C189 /* GMUDefaultClusterIconGenerator.h */,
+				33C342EB2066A3EB0079C189 /* GMUDefaultClusterIconGenerator.m */,
+				33C342EC2066A3EB0079C189 /* GMUDefaultClusterRenderer+Testing.h */,
+				33C342ED2066A3EB0079C189 /* GMUDefaultClusterRenderer.h */,
+				33C342EE2066A3EB0079C189 /* GMUDefaultClusterRenderer.m */,
+				33C342D52066A3EB0079C189 /* GMUClusterAlgorithm.h */,
+				33C342D62066A3EB0079C189 /* GMUGridBasedClusterAlgorithm.h */,
+				33C342D72066A3EB0079C189 /* GMUGridBasedClusterAlgorithm.m */,
+				33C342D82066A3EB0079C189 /* GMUNonHierarchicalDistanceBasedAlgorithm.h */,
+				33C342D92066A3EB0079C189 /* GMUNonHierarchicalDistanceBasedAlgorithm.m */,
+				33C342DA2066A3EB0079C189 /* GMUSimpleClusterAlgorithm.h */,
+				33C342DB2066A3EB0079C189 /* GMUSimpleClusterAlgorithm.m */,
+				33C342DC2066A3EB0079C189 /* GMUWrappingDictionaryKey.h */,
+				33C342DD2066A3EB0079C189 /* GMUWrappingDictionaryKey.m */,
+				33C3430B2066A3EB0079C189 /* GQTBounds.h */,
+				33C3430C2066A3EB0079C189 /* GQTPoint.h */,
+				33C3430D2066A3EB0079C189 /* GQTPointQuadTree.h */,
+				33C3430E2066A3EB0079C189 /* GQTPointQuadTree.m */,
+				33C3430F2066A3EB0079C189 /* GQTPointQuadTreeChild.h */,
+				33C343102066A3EB0079C189 /* GQTPointQuadTreeChild.m */,
+				33C343112066A3EB0079C189 /* GQTPointQuadTreeItem.h */,
 				33C342D32066A3EB0079C189 /* Clustering */,
 				33C342EF2066A3EB0079C189 /* Geometry */,
 				33C342CC2066A3EB0079C189 /* Heatmap */,
@@ -305,14 +382,6 @@
 			isa = PBXGroup;
 			children = (
 				33C342D42066A3EB0079C189 /* Algo */,
-				33C342DE2066A3EB0079C189 /* GMUCluster.h */,
-				33C342DF2066A3EB0079C189 /* GMUClusterItem.h */,
-				33C342E02066A3EB0079C189 /* GMUClusterManager+Testing.h */,
-				33C342E12066A3EB0079C189 /* GMUClusterManager.h */,
-				33C342E22066A3EB0079C189 /* GMUClusterManager.m */,
-				33C342E32066A3EB0079C189 /* GMUMarkerClustering.h */,
-				33C342E42066A3EB0079C189 /* GMUStaticCluster.h */,
-				33C342E52066A3EB0079C189 /* GMUStaticCluster.m */,
 				33C342E62066A3EB0079C189 /* View */,
 			);
 			path = Clustering;
@@ -321,15 +390,6 @@
 		33C342D42066A3EB0079C189 /* Algo */ = {
 			isa = PBXGroup;
 			children = (
-				33C342D52066A3EB0079C189 /* GMUClusterAlgorithm.h */,
-				33C342D62066A3EB0079C189 /* GMUGridBasedClusterAlgorithm.h */,
-				33C342D72066A3EB0079C189 /* GMUGridBasedClusterAlgorithm.m */,
-				33C342D82066A3EB0079C189 /* GMUNonHierarchicalDistanceBasedAlgorithm.h */,
-				33C342D92066A3EB0079C189 /* GMUNonHierarchicalDistanceBasedAlgorithm.m */,
-				33C342DA2066A3EB0079C189 /* GMUSimpleClusterAlgorithm.h */,
-				33C342DB2066A3EB0079C189 /* GMUSimpleClusterAlgorithm.m */,
-				33C342DC2066A3EB0079C189 /* GMUWrappingDictionaryKey.h */,
-				33C342DD2066A3EB0079C189 /* GMUWrappingDictionaryKey.m */,
 			);
 			path = Algo;
 			sourceTree = "<group>";
@@ -337,14 +397,6 @@
 		33C342E62066A3EB0079C189 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				33C342E72066A3EB0079C189 /* GMUClusterIconGenerator.h */,
-				33C342E82066A3EB0079C189 /* GMUClusterRenderer.h */,
-				33C342E92066A3EB0079C189 /* GMUDefaultClusterIconGenerator+Testing.h */,
-				33C342EA2066A3EB0079C189 /* GMUDefaultClusterIconGenerator.h */,
-				33C342EB2066A3EB0079C189 /* GMUDefaultClusterIconGenerator.m */,
-				33C342EC2066A3EB0079C189 /* GMUDefaultClusterRenderer+Testing.h */,
-				33C342ED2066A3EB0079C189 /* GMUDefaultClusterRenderer.h */,
-				33C342EE2066A3EB0079C189 /* GMUDefaultClusterRenderer.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -392,13 +444,6 @@
 		33C3430A2066A3EB0079C189 /* QuadTree */ = {
 			isa = PBXGroup;
 			children = (
-				33C3430B2066A3EB0079C189 /* GQTBounds.h */,
-				33C3430C2066A3EB0079C189 /* GQTPoint.h */,
-				33C3430D2066A3EB0079C189 /* GQTPointQuadTree.h */,
-				33C3430E2066A3EB0079C189 /* GQTPointQuadTree.m */,
-				33C3430F2066A3EB0079C189 /* GQTPointQuadTreeChild.h */,
-				33C343102066A3EB0079C189 /* GQTPointQuadTreeChild.m */,
-				33C343112066A3EB0079C189 /* GQTPointQuadTreeItem.h */,
 			);
 			path = QuadTree;
 			sourceTree = "<group>";
@@ -420,6 +465,7 @@
 				33ED5967206823B5005F29F6 /* BookingsTVC.swift */,
 				33E91D712071DFAA00DEFEEE /* PromotionsTVC.swift */,
 				33E91D752071E9EC00DEFEEE /* QRScanner.swift */,
+				33075BB22073099C0078CCE5 /* SettingsTVC.swift */,
 			);
 			path = "Side Menu";
 			sourceTree = "<group>";
@@ -475,7 +521,23 @@
 		DFEA15D21A49D5C2129ABDED /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3300BC1D20735525007A1967 /* UIKit.framework */,
+				3300BC1B20735520007A1967 /* SystemConfiguration.framework */,
+				3300BC1920735518007A1967 /* QuartzCore.framework */,
+				3300BC172073550E007A1967 /* OpenGLES.framework */,
+				3300BC1520735503007A1967 /* libc++.tbd */,
+				3300BC13207354F6007A1967 /* ImageIO.framework */,
+				3300BC11207354E8007A1967 /* GLKit.framework */,
+				3300BC0F207354E1007A1967 /* CoreText.framework */,
+				3300BC0D207354D4007A1967 /* CoreTelephony.framework */,
+				3300BC0B207354CE007A1967 /* CoreLocation.framework */,
+				3300BC09207354BD007A1967 /* CoreImage.framework */,
+				3300BC07207354B7007A1967 /* CoreGraphics.framework */,
+				3300BC05207354AC007A1967 /* CoreData.framework */,
+				3300BC03207354A1007A1967 /* Accelerate.framework */,
+				3300BC012073548D007A1967 /* libz.tbd */,
 				0AE40D41259753C29E45E99B /* Pods_My_Courses.framework */,
+				6744C611725DF4C39C441494 /* Pods_MyCourses.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -485,6 +547,8 @@
 			children = (
 				671BE70EF92A619FB40277CD /* Pods-My Courses.debug.xcconfig */,
 				5D04678EA58C0DF83244740D /* Pods-My Courses.release.xcconfig */,
+				BE053EC89A3C4784FC5CC53F /* Pods-MyCourses.debug.xcconfig */,
+				A618C8BB53319A6122C54AB6 /* Pods-MyCourses.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -492,9 +556,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		332C8C7E2048835B00BE2646 /* My Courses */ = {
+		332C8C7E2048835B00BE2646 /* MyCourses */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 332C8C912048835B00BE2646 /* Build configuration list for PBXNativeTarget "My Courses" */;
+			buildConfigurationList = 332C8C912048835B00BE2646 /* Build configuration list for PBXNativeTarget "MyCourses" */;
 			buildPhases = (
 				9BDE9A41004DFD6F7C62A83D /* [CP] Check Pods Manifest.lock */,
 				332C8C7B2048835B00BE2646 /* Sources */,
@@ -507,9 +571,9 @@
 			);
 			dependencies = (
 			);
-			name = "My Courses";
+			name = MyCourses;
 			productName = "My Courses";
-			productReference = 332C8C7F2048835B00BE2646 /* My Courses.app */;
+			productReference = 332C8C7F2048835B00BE2646 /* MyCourses.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -536,20 +600,21 @@
 					};
 				};
 			};
-			buildConfigurationList = 332C8C7A2048835B00BE2646 /* Build configuration list for PBXProject "My Courses" */;
+			buildConfigurationList = 332C8C7A2048835B00BE2646 /* Build configuration list for PBXProject "MyCourses" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
+				ar,
 			);
 			mainGroup = 332C8C762048835B00BE2646;
 			productRefGroup = 332C8C802048835B00BE2646 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				332C8C7E2048835B00BE2646 /* My Courses */,
+				332C8C7E2048835B00BE2646 /* MyCourses */,
 			);
 		};
 /* End PBXProject section */
@@ -559,6 +624,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				336C6592207962760086C1E2 /* localized.strings in Resources */,
 				332C8C8D2048835B00BE2646 /* LaunchScreen.storyboard in Resources */,
 				332C8C8A2048835B00BE2646 /* Assets.xcassets in Resources */,
 				332C8C882048835B00BE2646 /* Main.storyboard in Resources */,
@@ -574,7 +640,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-My Courses/Pods-My Courses-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-MyCourses/Pods-MyCourses-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AutoInsetter/AutoInsetter.framework",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
@@ -627,7 +693,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-My Courses/Pods-My Courses-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyCourses/Pods-MyCourses-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9BDE9A41004DFD6F7C62A83D /* [CP] Check Pods Manifest.lock */ = {
@@ -641,7 +707,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-My Courses-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-MyCourses-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -654,7 +720,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-My Courses/Pods-My Courses-resources.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-MyCourses/Pods-MyCourses-resources.sh",
 				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
 				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
 				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterKitResources.bundle",
@@ -666,7 +732,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-My Courses/Pods-My Courses-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyCourses/Pods-MyCourses-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -678,25 +744,26 @@
 			files = (
 				33E91D722071DFAA00DEFEEE /* PromotionsTVC.swift in Sources */,
 				33E198CB20715A830073328B /* CenterProfileVC.swift in Sources */,
+				3300BC2920735A17007A1967 /* GMUGradient.m in Sources */,
 				33ED596A2068352A005F29F6 /* BookingTVCell.swift in Sources */,
 				337C13E12056F603000E16CA /* CoursesTVC.swift in Sources */,
+				3300BC2420735889007A1967 /* GMUStaticCluster.m in Sources */,
 				33041BEB2055A3B30087FF00 /* Course.swift in Sources */,
+				3300BC2220735889007A1967 /* GMUWrappingDictionaryKey.m in Sources */,
+				3300BC2A20735A17007A1967 /* GMUHeatmapTileLayer.m in Sources */,
 				33CD9EA4204DB18600579125 /* RegisterPage.swift in Sources */,
-				33C343152066A3EC0079C189 /* GMUGridBasedClusterAlgorithm.m in Sources */,
 				33B7938B2053EF1A00E84032 /* Consts.swift in Sources */,
 				33041BF120561DEA0087FF00 /* CoursesDiscoverTVCell.swift in Sources */,
+				3300BC2B20735A17007A1967 /* GMUWeightedLatLng.m in Sources */,
 				33E198CD207169390073328B /* CenterProfileVP.swift in Sources */,
 				33041BED2055A4C30087FF00 /* RecCourseCell.swift in Sources */,
 				33B465DC205443D400446F99 /* CompRegTVC.swift in Sources */,
-				33C343122066A3EC0079C189 /* GMUGradient.m in Sources */,
-				33C343252066A3EC0079C189 /* GMUPoint.m in Sources */,
-				33C343162066A3EC0079C189 /* GMUNonHierarchicalDistanceBasedAlgorithm.m in Sources */,
-				33C343292066A3EC0079C189 /* GQTPointQuadTreeChild.m in Sources */,
+				3300BC2620735889007A1967 /* GMUDefaultClusterRenderer.m in Sources */,
 				33FE11612048A2EA00A01923 /* LoginPage.swift in Sources */,
 				33E91D742071E15100DEFEEE /* PromotionTVCell.swift in Sources */,
+				3300BC2120735889007A1967 /* GMUSimpleClusterAlgorithm.m in Sources */,
 				33E91D762071E9ED00DEFEEE /* QRScanner.swift in Sources */,
 				337C13E320570132000E16CA /* CentersMapVC.swift in Sources */,
-				33C3431F2066A3EC0079C189 /* GMUKMLParser.m in Sources */,
 				3312C423206FBF1C00EB8BAC /* StartingDate.swift in Sources */,
 				33E198C5207136DB0073328B /* CourseProfileVP.swift in Sources */,
 				33E198C72071536C0073328B /* CenterInfoTVC.swift in Sources */,
@@ -706,39 +773,28 @@
 				332C8C832048835B00BE2646 /* AppDelegate.swift in Sources */,
 				33B465E120544B0E00446F99 /* Category.swift in Sources */,
 				332C8C9920488C5B00BE2646 /* Extensions.swift in Sources */,
-				33C343212066A3EC0079C189 /* GMUGeometryCollection.m in Sources */,
-				33C343242066A3EC0079C189 /* GMUPlacemark.m in Sources */,
 				3312C425206FC2CD00EB8BAC /* SubCourseTVCell.swift in Sources */,
 				332C8C962048846500BE2646 /* LoginMainVC.swift in Sources */,
-				33C3431C2066A3EC0079C189 /* GMUDefaultClusterRenderer.m in Sources */,
-				33C343132066A3EC0079C189 /* GMUHeatmapTileLayer.m in Sources */,
+				3300BC2720735A0D007A1967 /* GQTPointQuadTree.m in Sources */,
 				33041BEF20561C280087FF00 /* CoursesDiscoverTVC.swift in Sources */,
-				33C343182066A3EC0079C189 /* GMUWrappingDictionaryKey.m in Sources */,
+				3300BC2020735889007A1967 /* GMUNonHierarchicalDistanceBasedAlgorithm.m in Sources */,
 				337C13E520570D98000E16CA /* Center.swift in Sources */,
-				33C343172066A3EC0079C189 /* GMUSimpleClusterAlgorithm.m in Sources */,
-				33C3431A2066A3EC0079C189 /* GMUStaticCluster.m in Sources */,
 				3312C41F206FBE6700EB8BAC /* SubCoursesTVC.swift in Sources */,
-				33C343282066A3EC0079C189 /* GQTPointQuadTree.m in Sources */,
-				33C343142066A3EC0079C189 /* GMUWeightedLatLng.m in Sources */,
-				33C343202066A3EC0079C189 /* GMUFeature.m in Sources */,
-				33C343272066A3EC0079C189 /* GMUStyle.m in Sources */,
+				3300BC1F20735889007A1967 /* GMUGridBasedClusterAlgorithm.m in Sources */,
+				33075BB32073099C0078CCE5 /* SettingsTVC.swift in Sources */,
 				3312C421206FBE7D00EB8BAC /* SubCourse.swift in Sources */,
-				33C343262066A3EC0079C189 /* GMUPolygon.m in Sources */,
 				33E91D632071B6E500DEFEEE /* BookCourseVC.swift in Sources */,
 				33E91D702071C6D000DEFEEE /* PromoCode.swift in Sources */,
-				33C3431D2066A3EC0079C189 /* GMUGeoJSONParser.m in Sources */,
 				33E91D692071B77C00DEFEEE /* BookCourseVP.swift in Sources */,
 				33ED5968206823B5005F29F6 /* BookingsTVC.swift in Sources */,
-				33C343222066A3EC0079C189 /* GMUGroundOverlay.m in Sources */,
-				33C3431E2066A3EC0079C189 /* GMUGeometryRenderer.m in Sources */,
 				3312C4272070564B00EB8BAC /* CourseProfileVC.swift in Sources */,
 				33E198C92071564D0073328B /* CenterInfoTVCell.swift in Sources */,
-				33C343192066A3EC0079C189 /* GMUClusterManager.m in Sources */,
 				33041BE3205546F00087FF00 /* SplashVC.swift in Sources */,
+				3300BC2820735A0D007A1967 /* GQTPointQuadTreeChild.m in Sources */,
 				33E91D672071B76900DEFEEE /* BookCourseTVC.swift in Sources */,
-				33C343232066A3EC0079C189 /* GMULineString.m in Sources */,
-				33C3431B2066A3EC0079C189 /* GMUDefaultClusterIconGenerator.m in Sources */,
+				3300BC2320735889007A1967 /* GMUClusterManager.m in Sources */,
 				33E60EF0206D427F008EE27A /* Booking.swift in Sources */,
+				3300BC2520735889007A1967 /* GMUDefaultClusterIconGenerator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -749,6 +805,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				332C8C872048835B00BE2646 /* Base */,
+				336C658820794A110086C1E2 /* en */,
+				336C658A20794A750086C1E2 /* ar */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -761,6 +819,16 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		336C659020795DC30086C1E2 /* localized.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				336C658F20795DC30086C1E2 /* en */,
+				336C659120795DCD0086C1E2 /* ar */,
+			);
+			name = localized.strings;
+			path = "/Users/mamdouhelnakeeb/Desktop/WORK/Upwork/My Courses/App/MyCourses - iOS/My Courses/Helper";
+			sourceTree = "<absolute>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -768,6 +836,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -817,7 +886,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OBJC_BRIDGING_HEADER = "My Courses/Helper/My_Courses-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "My Courses/Helper/MyCourses-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -826,6 +895,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -867,7 +937,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OBJC_BRIDGING_HEADER = "My Courses/Helper/My_Courses-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "My Courses/Helper/MyCourses-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -875,17 +945,102 @@
 		};
 		332C8C922048835B00BE2646 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 671BE70EF92A619FB40277CD /* Pods-My Courses.debug.xcconfig */;
+			baseConfigurationReference = BE053EC89A3C4784FC5CC53F /* Pods-MyCourses.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "My Courses/My Courses.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = NO;
 				DEVELOPMENT_TEAM = 65TWY5P96S;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/My\\ Courses",
+					"$(PROJECT_DIR)/My\\ Courses",
+					"$(PROJECT_DIR)/My\\ Courses",
+					"$(PROJECT_DIR)/My\\ Courses",
+				);
 				INFOPLIST_FILE = "My Courses/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-framework",
+					"\"AVFoundation\"",
+					"-framework",
+					"\"Accounts\"",
+					"-framework",
+					"\"Alamofire\"",
+					"-framework",
+					"\"AutoInsetter\"",
+					"-framework",
+					"\"Bolts\"",
+					"-framework",
+					"\"CoreData\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreMedia\"",
+					"-framework",
+					"\"CoreText\"",
+					"-framework",
+					"\"DropDown\"",
+					"-framework",
+					"\"FBSDKCoreKit\"",
+					"-framework",
+					"\"FBSDKLoginKit\"",
+					"-framework",
+					"\"FBSDKShareKit\"",
+					"-framework",
+					"\"FSPagerView\"",
+					"-framework",
+					"\"FacebookCore\"",
+					"-framework",
+					"\"FacebookLogin\"",
+					"-framework",
+					"\"FacebookShare\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"GTMOAuth2\"",
+					"-framework",
+					"\"GTMSessionFetcher\"",
+					"-framework",
+					"\"GoogleSignIn\"",
+					"-framework",
+					"\"GoogleToolboxForMac\"",
+					"-framework",
+					"\"Pageboy\"",
+					"-framework",
+					"\"QRCodeReader\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"SDWebImage\"",
+					"-framework",
+					"\"SafariServices\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SideMenuController\"",
+					"-framework",
+					"\"Social\"",
+					"-framework",
+					"\"SwiftyJSON\"",
+					"-framework",
+					"\"Tabman\"",
+					"-framework",
+					"\"TwitterCore\"",
+					"-framework",
+					"\"TwitterKit\"",
+					"-framework",
+					"\"UIKit\"",
+					"-framework",
+					"\"libwebp\"",
+					"-lc++",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mycoursesapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "My Courses/Helper/My_Courses-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "My Courses/Helper/Google-Maps-iOS-Utils/MyCourses-Bridging-Header.h";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "MyCourses-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -894,17 +1049,102 @@
 		};
 		332C8C932048835B00BE2646 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5D04678EA58C0DF83244740D /* Pods-My Courses.release.xcconfig */;
+			baseConfigurationReference = A618C8BB53319A6122C54AB6 /* Pods-MyCourses.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "My Courses/My Courses.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = NO;
 				DEVELOPMENT_TEAM = 65TWY5P96S;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/My\\ Courses",
+					"$(PROJECT_DIR)/My\\ Courses",
+					"$(PROJECT_DIR)/My\\ Courses",
+					"$(PROJECT_DIR)/My\\ Courses",
+				);
 				INFOPLIST_FILE = "My Courses/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-framework",
+					"\"AVFoundation\"",
+					"-framework",
+					"\"Accounts\"",
+					"-framework",
+					"\"Alamofire\"",
+					"-framework",
+					"\"AutoInsetter\"",
+					"-framework",
+					"\"Bolts\"",
+					"-framework",
+					"\"CoreData\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreMedia\"",
+					"-framework",
+					"\"CoreText\"",
+					"-framework",
+					"\"DropDown\"",
+					"-framework",
+					"\"FBSDKCoreKit\"",
+					"-framework",
+					"\"FBSDKLoginKit\"",
+					"-framework",
+					"\"FBSDKShareKit\"",
+					"-framework",
+					"\"FSPagerView\"",
+					"-framework",
+					"\"FacebookCore\"",
+					"-framework",
+					"\"FacebookLogin\"",
+					"-framework",
+					"\"FacebookShare\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"GTMOAuth2\"",
+					"-framework",
+					"\"GTMSessionFetcher\"",
+					"-framework",
+					"\"GoogleSignIn\"",
+					"-framework",
+					"\"GoogleToolboxForMac\"",
+					"-framework",
+					"\"Pageboy\"",
+					"-framework",
+					"\"QRCodeReader\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"SDWebImage\"",
+					"-framework",
+					"\"SafariServices\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SideMenuController\"",
+					"-framework",
+					"\"Social\"",
+					"-framework",
+					"\"SwiftyJSON\"",
+					"-framework",
+					"\"Tabman\"",
+					"-framework",
+					"\"TwitterCore\"",
+					"-framework",
+					"\"TwitterKit\"",
+					"-framework",
+					"\"UIKit\"",
+					"-framework",
+					"\"libwebp\"",
+					"-lc++",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mycoursesapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "My Courses/Helper/My_Courses-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "My Courses/Helper/Google-Maps-iOS-Utils/MyCourses-Bridging-Header.h";
 				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "MyCourses-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
@@ -915,7 +1155,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		332C8C7A2048835B00BE2646 /* Build configuration list for PBXProject "My Courses" */ = {
+		332C8C7A2048835B00BE2646 /* Build configuration list for PBXProject "MyCourses" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				332C8C8F2048835B00BE2646 /* Debug */,
@@ -924,7 +1164,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		332C8C912048835B00BE2646 /* Build configuration list for PBXNativeTarget "My Courses" */ = {
+		332C8C912048835B00BE2646 /* Build configuration list for PBXNativeTarget "MyCourses" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				332C8C922048835B00BE2646 /* Debug */,

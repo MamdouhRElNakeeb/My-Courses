@@ -10,6 +10,12 @@ import UIKit
 import FSPagerView
 import FacebookCore
 import FacebookLogin
+
+import TwitterKit
+
+import FBSDKCoreKit
+import FBSDKLoginKit
+
 import Alamofire
 import SwiftyJSON
 import SideMenuController
@@ -277,10 +283,193 @@ class LoginMainVC: UIViewController {
         }
     }
     
+    
+    func handleSocialLogin(provider: String, email: String, socialID: String){
+        
+        let params: Parameters = [
+            "provider": provider,
+            "email": email.lowercased(),
+            "socialID": socialID
+        ]
+        
+        Alamofire.request(Consts.LOGIN_SOCIAL, method: .post, parameters: params).responseJSON{
+            
+            response in
+            
+            switch response.result {
+            case .success(let value):
+                let json = JSON(value)
+                print("JSON: \(json)")
+                
+                if let login = Bool(json["login"].stringValue){
+                    
+                    if login{
+                        
+                        if let staff = json["is_staff"].bool,
+                            let superuser = json["is_superuser"].bool{
+                            
+                            if staff || superuser{
+                                
+                                let alert = UIAlertController(title: "Error", message: "You're not permitted to login here", preferredStyle: UIAlertControllerStyle.alert)
+                                alert.addAction(UIAlertAction(title: "Try again", style: UIAlertActionStyle.default, handler: nil))
+                                self.present(alert, animated: true, completion: nil)
+                                return
+                                
+                            }
+                        }
+                        
+                        UserDefaults.standard.set(true, forKey: "login")
+                        UserDefaults.standard.set(json["first_name"].string, forKey: "name")
+                        UserDefaults.standard.set(email, forKey: "email")
+                        UserDefaults.standard.set(json["id"].int, forKey: "id")
+                        
+                        if let mobile = json["mobile"].string{
+                            
+                            if !mobile.isEmpty{
+                                // Home
+                                UserDefaults.standard.set(json["mobile"].string, forKey: "mobile")
+                                self.goHome()
+                            }
+                            else{
+                                // Complete Registration
+                                let compReg =  self.storyboard?.instantiateViewController(withIdentifier: "CompRegNC") as! UINavigationController
+                                self.present(compReg, animated: true, completion: nil)
+                            }
+                            
+                        }
+                        else{
+                            // Complete Registration
+                            let compReg =  self.storyboard?.instantiateViewController(withIdentifier: "CompRegNC") as! UINavigationController
+                            self.present(compReg, animated: true, completion: nil)
+                        }
+                    }
+                    else{
+                        
+                        let alert = UIAlertController(title: "Error", message: "Wrong Email or Password", preferredStyle: UIAlertControllerStyle.alert)
+                        alert.addAction(UIAlertAction(title: "Try again", style: UIAlertActionStyle.default, handler: nil))
+                        self.present(alert, animated: true, completion: nil)
+                        return
+                        
+                    }
+                }
+                else if let error = json["errors"].string{
+                    
+                    let alert = UIAlertController(title: "Error", message: error, preferredStyle: UIAlertControllerStyle.alert)
+                    alert.addAction(UIAlertAction(title: "Try again", style: UIAlertActionStyle.default, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
+                    
+                    return
+                    
+                }
+                
+            case .failure(let error):
+                print(error)
+                
+                let alert = UIAlertController(title: "Error", message: "An error occuerd, Try again Later", preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+                
+                return
+            }
+        }
+    }
+    
+    func handleSocialSignup(provider: String, email: String, socialID: String, name: String){
+        
+        let params: Parameters = [
+            "provider": provider,
+            "email": email.lowercased(),
+            "socialID": socialID,
+            "first_name": name
+        ]
+        
+        Alamofire.request(Consts.SIGN_UP_SOCIAL, method: .post, parameters: params).responseJSON{
+            
+            response in
+            
+            switch response.result {
+            case .success(let value):
+                let json = JSON(value)
+                print("JSON: \(json)")
+                
+                if let created = Bool(json["created"].stringValue){
+                    
+                    if created{
+                        
+                        UserDefaults.standard.set(true, forKey: "login")
+                        UserDefaults.standard.set(name, forKey: "name")
+                        UserDefaults.standard.set(email, forKey: "email")
+                        UserDefaults.standard.set(json["id"].int, forKey: "id")
+                        
+                        // Complete Registration
+                        let compReg =  self.storyboard?.instantiateViewController(withIdentifier: "CompRegNC") as! UINavigationController
+                        self.present(compReg, animated: true, completion: nil)
+                        
+                    }
+                    else{
+                        
+                        let alert = UIAlertController(title: "Error", message: "Wrong Email or Password", preferredStyle: UIAlertControllerStyle.alert)
+                        alert.addAction(UIAlertAction(title: "Try again", style: UIAlertActionStyle.default, handler: nil))
+                        self.present(alert, animated: true, completion: nil)
+                        
+                        return
+                        
+                    }
+                    
+                }
+                else if var error = json["username"][0].string{
+                    
+                    error = "User is already existed"
+                    
+                    let alert = UIAlertController(title: "Error", message: error, preferredStyle: UIAlertControllerStyle.alert)
+                    alert.addAction(UIAlertAction(title: "Try again", style: UIAlertActionStyle.default, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
+                    
+                    return
+                    
+                }
+                else{
+                    let alert = UIAlertController(title: "Error", message: "An error occuerd, Try again Later", preferredStyle: UIAlertControllerStyle.alert)
+                    alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
+                    
+                    return
+                }
+                
+                
+            case .failure(let error):
+                print(error)
+                
+                let alert = UIAlertController(title: "Error", message: "An error occuerd, Try again Later", preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+                
+                return
+            }
+            
+        }
+    }
+    
     func goHome(){
         
         let mainVC =  self.storyboard?.instantiateViewController(withIdentifier: "homeNC") as! UINavigationController
-        self.present(mainVC, animated: true, completion: nil)
+        
+        let sideMenuVC =  self.storyboard?.instantiateViewController(withIdentifier: "SideMenuVC") as! SideMenuVC
+        let sideMenuViewController = SideMenuController()
+        // embed the side and center controllers
+        sideMenuViewController.embed(sideViewController: sideMenuVC)
+        sideMenuViewController.embed(centerViewController: mainVC)
+        
+        let langStr = Locale.preferredLanguages[0]
+        
+        if langStr == "en"{
+            SideMenuController.preferences.drawing.sidePanelPosition = .underCenterPanelLeft
+        }
+        else{
+            SideMenuController.preferences.drawing.sidePanelPosition = .underCenterPanelRight
+        }
+        
+        show(sideMenuViewController, sender: nil)
         
     }
 }
@@ -356,6 +545,79 @@ extension LoginMainVC: LoginDelegate, RegisterDelegate{
     
     func loginUserWithSocial(provider: String) {
         
+        if provider == Consts.FACEBOOK_PROVIDER{
+            
+            let loginManager = FBSDKLoginManager()
+            loginManager.logIn(withReadPermissions: [ "public_profile" ,"email" ], from: self) { loginResult,error  in
+                
+                if error != nil {
+                    print("error")
+                }else if(loginResult?.isCancelled)!{
+                    print("result cancelled")
+                }else {
+                    print("success")
+                    print(loginResult)
+                    
+                    let params = ["fields" : "id, email, name"]
+                    let graphRequest = GraphRequest(graphPath: "me", parameters: params)
+                    graphRequest.start {
+                        (urlResponse, requestResult) in
+                        
+                        switch requestResult {
+                        case .failed(let error):
+                            print("error in graph request:", error)
+                            break
+                        case .success(let graphResponse):
+                            if let responseDictionary = graphResponse.dictionaryValue {
+                                print(responseDictionary)
+                                
+                                print(responseDictionary["name"])
+                                print(responseDictionary["email"])
+                                
+                                let email = responseDictionary["email"] as! String
+                                let socialID = responseDictionary["id"] as! String
+                                
+                                self.handleSocialLogin(provider: Consts.FACEBOOK_PROVIDER, email: email, socialID: socialID)
+                            }
+                        }
+                    }
+                    
+                }
+            }
+            
+        }
+        else if provider == Consts.TWITTER_PROVIDER{
+            
+            
+            TWTRTwitter.sharedInstance().logIn{ session, error in
+                if (session != nil)
+                {
+                    print("signed in as \(session!.userName)")
+                    
+                    let client = TWTRAPIClient.withCurrentUser()
+                    let request = client.urlRequest(withMethod: "GET",
+                                                    urlString: "https://api.twitter.com/1.1/account/verify_credentials.json",
+                                                    parameters: ["include_email": "true", "skip_status": "true"],
+                                                    error: nil)
+                    client.sendTwitterRequest(request)
+                    { response, data, connectionError in
+                        print(response)
+                        
+                        let json = JSON(data)
+                        print(json)
+                        let socialID = json["id_str"].stringValue
+                        let email = json["email"].stringValue
+                        
+                        self.handleSocialLogin(provider: provider, email: email, socialID: socialID)
+                    }
+                }
+                else
+                {
+                    print("error: \(error!.localizedDescription)");
+                }
+            }
+            
+        }
         
     }
     
@@ -400,65 +662,81 @@ extension LoginMainVC: LoginDelegate, RegisterDelegate{
         
         if provider == Consts.FACEBOOK_PROVIDER{
             
-            let loginManager = LoginManager()
             
-            loginManager.logIn(readPermissions: [ .publicProfile, .email ], viewController: self) { loginResult in
+            let loginManager = FBSDKLoginManager()
+            loginManager.logIn(withReadPermissions: [ "public_profile" ,"email" ], from: self) { loginResult,error  in
                 
-                switch loginResult {
-                case .failed(let error):
-                    print(error)
-                case .cancelled:
-                    print("User cancelled login.")
-                case .success(let grantedPermissions, let declinedPermissions, let accessToken):
-                    print("Logged in!")
-//                    print("Login succeeded with granted permissions: \(grantedPermissions)")
-                    print(accessToken)
-                
-//                    let params: Parameters = [
-//                        "access_token": accessToken
-//
-//                    ]
-//
-//                    let headers: HTTPHeaders = [
-//                        "sdk": "ios",
-//                        "fields": "id,name,email",
-//                        "include_headers": "false",
-//                        "format": "json",
-//                        "access_token": "\(accessToken)"
-//                    ]
-//
-//                    Alamofire.request("https://graph.facebook.com/v2.11/me", method: .get, parameters: params, headers: headers).responseJSON{
-//
-//                        response in
-//
-//                        print(response)
-//
-//
-//                    }
+                if error != nil {
+                    print("error")
+                }else if(loginResult?.isCancelled)!{
+                    print("result cancelled")
+                }else {
+                    print("success")
+                    print(loginResult)
                     
-                    let connection = GraphRequestConnection()
-                    connection.add(MyProfileRequest()) { response, result in
-
-                        print(response)
-
-                        switch result {
-                        case .success(let response):
-                            print("Custom Graph Request Succeeded: \(response)")
-//                            print("My facebook id is \(response.dictionaryValue?["id"])")
-//                            print("My name is \(response.dictionaryValue?["name"])")
+                    let params = ["fields" : "id, email, name"]
+                    let graphRequest = GraphRequest(graphPath: "me", parameters: params)
+                    graphRequest.start {
+                        (urlResponse, requestResult) in
+                        
+                        switch requestResult {
                         case .failed(let error):
-                            print("Custom Graph Request Failed: \(error)")
+                            print("error in graph request:", error)
+                            break
+                        case .success(let graphResponse):
+                            if let responseDictionary = graphResponse.dictionaryValue {
+                                print(responseDictionary)
+                                
+                                print(responseDictionary["name"])
+                                print(responseDictionary["email"])
+                                
+                                let name = responseDictionary["name"] as! String
+                                let email = responseDictionary["email"] as! String
+                                let socialID = responseDictionary["id"] as! String
+                                
+                                self.handleSocialSignup(provider: Consts.FACEBOOK_PROVIDER, email: email, socialID: socialID, name: name)
+                                
+                            }
                         }
+                    
                     }
-                    connection.start()
+        
                 }
             }
-                
+            
         }
         else if provider == Consts.TWITTER_PROVIDER{
             
+            
+            TWTRTwitter.sharedInstance().logIn{ session, error in
+                if (session != nil)
+                {
+                    print("signed in as \(session!.userName)")
+                    
+                    let client = TWTRAPIClient.withCurrentUser()
+                    let request = client.urlRequest(withMethod: "GET",
+                                                    urlString: "https://api.twitter.com/1.1/account/verify_credentials.json",
+                                                    parameters: ["include_email": "true", "skip_status": "true"],
+                                                    error: nil)
+                    client.sendTwitterRequest(request)
+                    { response, data, connectionError in
+                        print(response)
+                        
+                        let json = JSON(data)
+                        print(json)
+                        let socialID = json["id_str"].stringValue
+                        let name = json["name"].stringValue
+                        let email = json["email"].stringValue
+                        
+                        self.handleSocialSignup(provider: Consts.TWITTER_PROVIDER, email: email, socialID: socialID, name: name)
+                    }
+                }
+                else
+                {
+                    print("error: \(error!.localizedDescription)");
+                }
+            }
         }
-        
         
     }
     

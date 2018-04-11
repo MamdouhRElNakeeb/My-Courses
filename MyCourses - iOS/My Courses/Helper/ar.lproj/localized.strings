@@ -1,0 +1,26 @@
+/* 
+  Localized.strings
+  
+
+  Created by Mamdouh El Nakeeb on 4/7/18.
+  
+*/
+home = "الرئيسية";
+my_bookings = "حجوزاتى";
+promo_code = "كوبون";
+invite_friends ="ادعو الأصدقاء";
+settings = "الإعدادات";
+logout = "خروج";
+
+info = "تفاصيل";
+book = "حجز";
+course = "كورس";
+center = "مركز";
+
+courses = "كورسات";
+centers = "مراكز";
+instructor = "المُعلم";
+starting_at = "تاريخ البدء";
+fees = "التكلفة";
+
+address = "العنوان";

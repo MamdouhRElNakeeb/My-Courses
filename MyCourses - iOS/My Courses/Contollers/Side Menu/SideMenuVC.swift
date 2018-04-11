@@ -28,7 +28,7 @@ class SideMenuVC: UIViewController {
         
         menuTV.dataSource = self
         menuTV.delegate = self
-        menuTV.frame = CGRect(x: 20, y: view.frame.height / 2 - 50 * CGFloat(menuItems) / 2, width: view.frame.width * 2 / 3 - 60, height: 50 * CGFloat(menuItems))
+        menuTV.frame = CGRect(x: 30, y: view.frame.height / 2 - 20 * CGFloat(menuItems) / 2, width: view.frame.width * 2 / 3 - 60, height: 50 * CGFloat(menuItems))
         menuTV.backgroundColor = UIColor.clear
         
         logoIV.frame = CGRect(x: menuTV.frame.minX, y: menuTV.frame.minY - 150, width: menuTV.frame.width, height: 130)
@@ -59,27 +59,27 @@ extension SideMenuVC: UITableViewDelegate, UITableViewDataSource {
         switch indexPath.row {
         case 0:
             let cell = UITableViewCell()
-            cell.textLabel?.text = "Home"
+            cell.textLabel?.text = NSLocalizedString("home", tableName: "localized" ,comment: "")
             cell.backgroundColor = UIColor.clear
             return cell
         case 1:
             let cell = UITableViewCell()
-            cell.textLabel?.text = "My Bookings"
+            cell.textLabel?.text = NSLocalizedString("my_bookings", tableName: "localized" ,comment: "")
             cell.backgroundColor = UIColor.clear
             return cell
         case 2:
             let cell = UITableViewCell()
-            cell.textLabel?.text = "Promo Code"
+            cell.textLabel?.text = NSLocalizedString("promo_code", tableName: "localized" ,comment: "")
             cell.backgroundColor = UIColor.clear
             return cell
         case 3:
             let cell = UITableViewCell()
-            cell.textLabel?.text = "Invite Friends"
+            cell.textLabel?.text = NSLocalizedString("invite_friends", tableName: "localized" ,comment: "")
             cell.backgroundColor = UIColor.clear
             return cell
         case 4:
             let cell = UITableViewCell()
-            cell.textLabel?.text = "Settings"
+            cell.textLabel?.text = NSLocalizedString("settings", tableName: "localized" ,comment: "")
             cell.backgroundColor = UIColor.clear
             return cell
         case 5:
@@ -94,7 +94,7 @@ extension SideMenuVC: UITableViewDelegate, UITableViewDataSource {
             return cell
         default:
             let cell = UITableViewCell()
-            cell.textLabel?.text = "Logout"
+            cell.textLabel?.text = NSLocalizedString("logout", tableName: "localized" ,comment: "")
             cell.backgroundColor = UIColor.clear
             return cell
         }
@@ -125,12 +125,23 @@ extension SideMenuVC: UITableViewDelegate, UITableViewDataSource {
             break
             
         case 3:
-            let vc = self.storyboard?.instantiateViewController(withIdentifier: "AboutNC") as? UINavigationController
-            sideMenuController?.embed(centerViewController: vc!)
+            // Invite Friends
+            let text = "Try My Courses App now. \n \(Consts.WEBSITE)"
+            
+            // set up activity view controller
+            let textToShare = [ text ]
+            let activityViewController = UIActivityViewController(activityItems: textToShare, applicationActivities: nil)
+            activityViewController.popoverPresentationController?.sourceView = self.view // so that iPads won't crash
+            
+            // exclude some activity types from the list (optional)
+//            activityViewController.excludedActivityTypes = [ UIActivityType.airDrop, UIActivityType.postToFacebook ]
+            
+            // present the view controller
+            self.present(activityViewController, animated: true, completion: nil)
             break
             
         case 4:
-            let vc = self.storyboard?.instantiateViewController(withIdentifier: "ContactNC") as? UINavigationController
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "SettingsNC") as? UINavigationController
             //            self.navigationController?.pushViewController(vc!, animated: true)
             sideMenuController?.embed(centerViewController: vc!)
             break

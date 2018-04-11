@@ -32,9 +32,6 @@ class CenterInfoTVC: UITableViewController {
         self.tableView.layoutIfNeeded()
         
         
-        print("centerInfo4: \(center.info)")
-        print("centerAdd4: \(center.address)")
-        
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {

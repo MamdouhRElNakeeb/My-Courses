@@ -10,6 +10,7 @@ import UIKit
 import DropDown
 import Alamofire
 import SwiftyJSON
+import SideMenuController
 
 class CompRegTVC: UITableViewController {
 
@@ -39,6 +40,33 @@ class CompRegTVC: UITableViewController {
         
         print("show drop down")
         fieldsOfStudyDD.show()
+        
+    }
+    
+    @IBAction func backOnClick(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    func goHome(){
+        
+        let mainVC =  self.storyboard?.instantiateViewController(withIdentifier: "homeNC") as! UINavigationController
+        
+        let sideMenuVC =  self.storyboard?.instantiateViewController(withIdentifier: "SideMenuVC") as! SideMenuVC
+        let sideMenuViewController = SideMenuController()
+        // embed the side and center controllers
+        sideMenuViewController.embed(sideViewController: sideMenuVC)
+        sideMenuViewController.embed(centerViewController: mainVC)
+        
+        let langStr = Locale.preferredLanguages[0]
+        
+        if langStr == "en"{
+            SideMenuController.preferences.drawing.sidePanelPosition = .underCenterPanelLeft
+        }
+        else{
+            SideMenuController.preferences.drawing.sidePanelPosition = .underCenterPanelRight
+        }
+        
+        show(sideMenuViewController, sender: nil)
         
     }
     
@@ -118,6 +146,8 @@ class CompRegTVC: UITableViewController {
                     if created{
                         
                         UserDefaults.standard.set(true, forKey: "login")
+                        
+                        self.goHome()
                         
                     }
                     else{

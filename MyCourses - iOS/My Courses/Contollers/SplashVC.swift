@@ -65,6 +65,17 @@ class SplashVC: UIViewController {
             sideMenuViewController.embed(sideViewController: sideMenuVC)
             sideMenuViewController.embed(centerViewController: mainVC)
             
+            let langStr = Locale.preferredLanguages[0]
+            
+            print(langStr)
+            
+            if langStr == "en"{
+                SideMenuController.preferences.drawing.sidePanelPosition = .underCenterPanelLeft
+            }
+            else{
+                SideMenuController.preferences.drawing.sidePanelPosition = .underCenterPanelRight
+            }
+            
             show(sideMenuViewController, sender: nil)
             
         }

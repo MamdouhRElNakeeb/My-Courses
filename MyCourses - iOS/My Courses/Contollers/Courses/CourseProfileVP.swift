@@ -22,7 +22,7 @@ class CourseProfileVP: TabmanViewController, PageboyViewControllerDataSource {
         self.dataSource = self
         
         self.bar.items = [
-            Item.init(title: "Centers")
+            Item.init(title: NSLocalizedString("centers", tableName: "localized" ,comment: ""))
         ]
         
         bar.style = .buttonBar

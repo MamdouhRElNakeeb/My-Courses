@@ -1,0 +1,27 @@
+/* 
+  Localized.strings
+  
+
+  Created by Mamdouh El Nakeeb on 4/7/18.
+  
+*/
+
+home = "Home";
+my_bookings = "My Bookings";
+promo_code = "Promo Code";
+invite_friends = "Invite Friends";
+settings = "Settings";
+logout = "Logout";
+
+info = "Info";
+book = "Book";
+course = "Course";
+center = "Center";
+
+courses = "Courses";
+centers = "Centers";
+instructor = "Instrcutor";
+starting_at = "Starting at";
+fees = "Fees";
+
+address = "Address";

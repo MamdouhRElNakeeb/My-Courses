@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:My Courses.xcodeproj">
+      location = "group:/Users/mamdouhelnakeeb/Desktop/WORK/Upwork/My Courses/App/MyCourses - iOS/MyCourses.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">

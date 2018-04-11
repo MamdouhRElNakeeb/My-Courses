@@ -1,0 +1,222 @@
+
+/* Class = "UIButton"; normalTitle = "Add"; ObjectID = "1As-7T-lJb"; */
+"1As-7T-lJb.normalTitle" = "أضف";
+
+/* Class = "UITextField"; placeholder = "Mobile No."; ObjectID = "1Fl-kF-qHx"; */
+"1Fl-kF-qHx.placeholder" = "رقم الموبايل";
+
+/* Class = "UILabel"; text = "50%"; ObjectID = "1QV-CL-F9R"; */
+"1QV-CL-F9R.text" = "50%";
+
+/* Class = "UITextField"; placeholder = "Department / Major"; ObjectID = "2nE-Na-Oln"; */
+"2nE-Na-Oln.placeholder" = "القسم / التخصص";
+
+/* Class = "UILabel"; text = "Near"; ObjectID = "4Jc-C9-k2y"; */
+"4Jc-C9-k2y.text" = "المراكز";
+
+/* Class = "UILabel"; text = "Scan QR Code"; ObjectID = "5AD-qK-3ar"; */
+"5AD-qK-3ar.text" = "Scan QR Code";
+
+/* Class = "UILabel"; text = "Courses"; ObjectID = "5RB-LZ-Ebb"; */
+"5RB-LZ-Ebb.text" = "اللغات";
+
+/* Class = "UITableViewSection"; headerTitle = "Promo Code"; ObjectID = "6nD-4Y-UbL"; */
+"6nD-4Y-UbL.headerTitle" = "كوبون الخصم";
+
+/* Class = "UIButton"; normalTitle = "Back"; ObjectID = "8UV-4W-eCX"; */
+"8UV-4W-eCX.normalTitle" = "رجوع";
+
+/* Class = "UILabel"; text = "Or enter it manually"; ObjectID = "9SI-c3-hgf"; */
+"9SI-c3-hgf.text" = "أدخل الكوبون";
+
+/* Class = "UILabel"; text = "Promo Code: "; ObjectID = "AYs-xg-dJx"; */
+"AYs-xg-dJx.text" = "كوبون: ";
+
+/* Class = "UILabel"; text = "About Us"; ObjectID = "BAc-3l-6ex"; */
+"BAc-3l-6ex.text" = "إعرف عنا";
+
+/* Class = "UILabel"; text = "Languages"; ObjectID = "GlV-mA-aY7"; */
+"GlV-mA-aY7.text" = "كورسات";
+
+/* Class = "UINavigationItem"; title = "Home"; ObjectID = "Gv7-kf-DIc"; */
+"Gv7-kf-DIc.title" = "الرئيسية";
+
+/* Class = "UILabel"; text = "2000 L.E"; ObjectID = "Hnt-cv-SQ1"; */
+"Hnt-cv-SQ1.text" = "2000 L.E";
+
+/* Class = "UILabel"; text = "120000 L.E"; ObjectID = "HxP-Yi-4iR"; */
+"HxP-Yi-4iR.text" = "120000 L.E";
+
+/* Class = "UILabel"; text = "Application Version"; ObjectID = "Hyc-lM-Bqw"; */
+"Hyc-lM-Bqw.text" = "نسخة التطبيق";
+
+/* Class = "UILabel"; text = "Course Booking"; ObjectID = "IR1-Me-e4c"; */
+"IR1-Me-e4c.text" = "حجز الكورس";
+
+/* Class = "UINavigationItem"; title = "Courses"; ObjectID = "IbR-ZY-gmP"; */
+"IbR-ZY-gmP.title" = "الكورسات";
+
+/* Class = "UILabel"; text = "5.0"; ObjectID = "KlJ-Mw-BOT"; */
+"KlJ-Mw-BOT.text" = "5.0";
+
+/* Class = "UILabel"; text = "Discount: "; ObjectID = "L1B-Kl-qtD"; */
+"L1B-Kl-qtD.text" = "التخفيض: ";
+
+/* Class = "UINavigationItem"; title = "Categories"; ObjectID = "LQ9-BO-nNL"; */
+"LQ9-BO-nNL.title" = "مجالات الدراسة";
+
+/* Class = "UILabel"; text = "Fees: "; ObjectID = "MNc-c6-l54"; */
+"MNc-c6-l54.text" = "التكلفة: ";
+
+/* Class = "UIButton"; normalTitle = "Don't have an account? Register here"; ObjectID = "MaB-In-rjZ"; */
+"MaB-In-rjZ.normalTitle" = "ليس لديك حساب؟ سجل الآن";
+
+/* Class = "UILabel"; text = "0 %"; ObjectID = "MwN-r2-qhX"; */
+"MwN-r2-qhX.text" = "0 %";
+
+/* Class = "UILabel"; text = "Course Name"; ObjectID = "Naj-KD-nii"; */
+"Naj-KD-nii.text" = "إسم الكورس";
+
+/* Class = "UIButton"; normalTitle = "Book Now"; ObjectID = "O25-yf-oW9"; */
+"O25-yf-oW9.normalTitle" = "إحجز الآن";
+
+/* Class = "UILabel"; text = "Feb. 28, 2018"; ObjectID = "Ojx-aQ-ax9"; */
+"Ojx-aQ-ax9.text" = "Feb. 28, 2018";
+
+/* Class = "UILabel"; text = "Center:"; ObjectID = "Onj-cG-1Ph"; */
+"Onj-cG-1Ph.text" = "المركز";
+
+/* Class = "UINavigationItem"; title = "Complete Registration"; ObjectID = "Pji-Df-3Pa"; */
+"Pji-Df-3Pa.title" = "إكتمال التسجيل";
+
+/* Class = "UINavigationItem"; title = "Promotions"; ObjectID = "QwA-Sm-EVJ"; */
+"QwA-Sm-EVJ.title" = "الكوبونات";
+
+/* Class = "UILabel"; text = "Nakeeb"; ObjectID = "S1R-ZA-Ta7"; */
+"S1R-ZA-Ta7.text" = "Nakeeb";
+
+/* Class = "UILabel"; text = "Recommended"; ObjectID = "T28-pF-4ZV"; */
+"T28-pF-4ZV.text" = "الكورسات";
+
+/* Class = "UILabel"; text = "Date"; ObjectID = "Twk-dp-iIZ"; */
+"Twk-dp-iIZ.text" = "تاريخ";
+
+/* Class = "UIButton"; normalTitle = "Course Starting Date"; ObjectID = "Wjh-BV-uqC"; */
+"Wjh-BV-uqC.normalTitle" = "تاريخ بدء الكورس";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "X74-Wq-fFv"; */
+"X74-Wq-fFv.title" = "Item";
+
+/* Class = "UILabel"; text = "Courses"; ObjectID = "XHD-4z-5uU"; */
+"XHD-4z-5uU.text" = "الكورسات";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "XHz-H5-2PJ"; */
+"XHz-H5-2PJ.title" = "Item";
+
+/* Class = "UITextField"; placeholder = "University / School Name"; ObjectID = "ZRY-Oe-aZr"; */
+"ZRY-Oe-aZr.placeholder" = "إسم الجامعة / المدرسة";
+
+/* Class = "UINavigationItem"; title = "My Bookings"; ObjectID = "axC-Wr-mIP"; */
+"axC-Wr-mIP.title" = "حجوزاتى";
+
+/* Class = "UILabel"; text = "Center Name"; ObjectID = "bCt-02-Dqa"; */
+"bCt-02-Dqa.text" = "إسم المركز";
+
+/* Class = "UILabel"; text = "Courses"; ObjectID = "cd8-yq-qkd"; */
+"cd8-yq-qkd.text" = "الموصى بها";
+
+/* Class = "UILabel"; text = "Centers"; ObjectID = "dBo-wP-Qn9"; */
+"dBo-wP-Qn9.text" = "القريبة";
+
+/* Class = "UILabel"; text = "1.0"; ObjectID = "dSq-my-XCW"; */
+"dSq-my-XCW.text" = "1.0";
+
+/* Class = "UINavigationItem"; title = "Recommnded Courses"; ObjectID = "dVA-Bh-CbW"; */
+"dVA-Bh-CbW.title" = "الكورسات الوصى بها";
+
+/* Class = "UIButton"; normalTitle = "Register"; ObjectID = "eNP-CZ-4qx"; */
+"eNP-CZ-4qx.normalTitle" = "تسجيل";
+
+/* Class = "UIButton"; normalTitle = "Language: English"; ObjectID = "fvv-ao-2RY"; */
+"fvv-ao-2RY.normalTitle" = "اللغة: English";
+
+/* Class = "UIButton"; normalTitle = "Back"; ObjectID = "gSU-SL-AY4"; */
+"gSU-SL-AY4.normalTitle" = "رجوع";
+
+/* Class = "UILabel"; text = "Courses"; ObjectID = "hWz-fn-TrF"; */
+"hWz-fn-TrF.text" = "الكورسات";
+
+/* Class = "UILabel"; text = "Starting Date: "; ObjectID = "iEx-1B-jYB"; */
+"iEx-1B-jYB.text" = "تاريخ البدء";
+
+/* Class = "UITextField"; placeholder = "Promo Code"; ObjectID = "jPr-Qo-cUG"; */
+"jPr-Qo-cUG.placeholder" = "كوبون";
+
+/* Class = "UILabel"; text = "Discount: "; ObjectID = "k0w-gv-oVc"; */
+"k0w-gv-oVc.text" = "النخفيض: ";
+
+/* Class = "UIButton"; normalTitle = "Choose Promo Code"; ObjectID = "kbq-2m-Ih3"; */
+"kbq-2m-Ih3.normalTitle" = "إختر كوبون";
+
+/* Class = "UILabel"; text = "Center Name"; ObjectID = "kfe-kB-hTf"; */
+"kfe-kB-hTf.text" = "إسم المركز";
+
+/* Class = "UINavigationItem"; title = "Settings"; ObjectID = "llZ-eh-TAR"; */
+"llZ-eh-TAR.title" = "الإعدادات";
+
+/* Class = "UILabel"; text = "1200 L.E"; ObjectID = "m1z-0a-N7V"; */
+"m1z-0a-N7V.text" = "1200 L.E";
+
+/* Class = "UILabel"; text = "Discover"; ObjectID = "mtv-MW-s5D"; */
+"mtv-MW-s5D.text" = "إكتشف";
+
+/* Class = "UILabel"; text = "Starting Date:"; ObjectID = "nGb-1I-7c4"; */
+"nGb-1I-7c4.text" = "تاريخ البدء: ";
+
+/* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "pNZ-yj-Muk"; */
+"pNZ-yj-Muk.title" = "رجوع";
+
+/* Class = "UILabel"; text = "Code"; ObjectID = "qZe-RE-czV"; */
+"qZe-RE-czV.text" = "Code";
+
+/* Class = "UILabel"; text = "Terms of Service"; ObjectID = "qr5-Oz-v9R"; */
+"qr5-Oz-v9R.text" = "بنود الخدمة";
+
+/* Class = "UILabel"; text = "Fees:"; ObjectID = "r7j-1J-GER"; */
+"r7j-1J-GER.text" = "النكلفة: ";
+
+/* Class = "UILabel"; text = "Human Development"; ObjectID = "rXM-Hl-Bw3"; */
+"rXM-Hl-Bw3.text" = "كورسات";
+
+/* Class = "UILabel"; text = "Rate:"; ObjectID = "rgn-eq-GXx"; */
+"rgn-eq-GXx.text" = "التقييم: ";
+
+/* Class = "UIButton"; normalTitle = "Choose Fields of Studies"; ObjectID = "rnk-8b-2P6"; */
+"rnk-8b-2P6.normalTitle" = "إختر مجالات الدراسة";
+
+/* Class = "UINavigationItem"; title = "Book"; ObjectID = "sDA-ur-5AF"; */
+"sDA-ur-5AF.title" = "حجز";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "tVZ-CW-4p4"; */
+"tVZ-CW-4p4.text" = "Label";
+
+/* Class = "UILabel"; text = "Courses"; ObjectID = "vA7-Gn-wqM"; */
+"vA7-Gn-wqM.text" = "تنمية بشرية";
+
+/* Class = "UINavigationItem"; title = "Centers"; ObjectID = "wQz-KN-eRJ"; */
+"wQz-KN-eRJ.title" = "المراكز";
+
+/* Class = "UILabel"; text = "Courses"; ObjectID = "x53-QC-Jcg"; */
+"x53-QC-Jcg.text" = "الكورسات";
+
+/* Class = "UILabel"; text = "Final Fees: "; ObjectID = "xjf-zY-Iip"; */
+"xjf-zY-Iip.text" = "التكلفة النهائية";
+
+/* Class = "UILabel"; text = "Instructor:"; ObjectID = "zfH-U4-0cJ"; */
+"zfH-U4-0cJ.text" = "المٌعلم: ";
+
+/* Class = "UIButton"; normalTitle = "Call Center"; ObjectID = "zg2-tQ-KZX"; */
+"zg2-tQ-KZX.normalTitle" = "إتصل بالمركز";
+
+/* Class = "UITableViewSection"; headerTitle = "Select Starting Date"; ObjectID = "zvb-ky-4jE"; */
+"zvb-ky-4jE.headerTitle" = "إختر تاريخ البدء";

@@ -48,6 +48,8 @@ class Consts{
     
     public static var APP_URL = WEBSITE + "app/";
     
+    public static var APP_ABOUT = WEBSITE + "about";
+    public static var APP_TERMS = WEBSITE + "terms";
     
     public static var TWT_IMG = "https://api.twitter.com/1.1/users/lookup.json";
     

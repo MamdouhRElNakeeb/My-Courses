@@ -103,6 +103,14 @@ extension String {
         return index
     }
     
+    func toBool() -> Bool{
+        if self == "false" {
+            return false
+        }else{
+            return true
+        }
+    }
+    
 }
 
 extension UIImage{
@@ -295,5 +303,11 @@ extension UISearchBar {
                 textField.textColor = newValue
             }
         }
+    }
+    
+    public func setTextColor(color: UIColor) {
+        let svs = subviews.flatMap { $0.subviews }
+        guard let tf = (svs.filter { $0 is UITextField }).first as? UITextField else { return }
+        tf.textColor = color
     }
 }

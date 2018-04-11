@@ -35,7 +35,8 @@ class HomeTVC: UITableViewController {
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.delegate = self
         
-        searchController.searchBar.textColor = UIColor.white
+        searchController.searchBar.tintColor = .white
+        UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).defaultTextAttributes = [NSAttributedStringKey.foregroundColor.rawValue: UIColor.white]
         
         navigationItem.searchController = searchController
         navigationItem.hidesSearchBarWhenScrolling = false
@@ -122,7 +123,7 @@ extension HomeTVC: UISearchResultsUpdating, UISearchBarDelegate {
         print(searchBar.text!)
         // TODO: Open search results
         let vc =  self.storyboard?.instantiateViewController(withIdentifier: "RecommendedCVC") as! RecommendedCVC
-        vc.url = Consts.SEARCH + searchBar.text! + "/"
+        vc.url = Consts.SEARCH + searchBar.text!
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }

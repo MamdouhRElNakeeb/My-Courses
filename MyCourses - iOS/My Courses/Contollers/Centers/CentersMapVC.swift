@@ -14,7 +14,7 @@ import SwiftyJSON
 class CentersMapVC: UIViewController {
 
     var mapView = GMSMapView()
-    var clusterManager: GMUClusterManager!
+//    var clusterManager: GMUClusterManager!
     
     var locationManager = CLLocationManager()
     var currentLocation: CLLocation?
@@ -28,7 +28,7 @@ class CentersMapVC: UIViewController {
         // Do any additional setup after loading the view.
         getLocationPermision()
         
-        setupClusterMangager()
+//        setupClusterMangager()
         
         getData()
     
@@ -55,7 +55,7 @@ class CentersMapVC: UIViewController {
                     let info = subJson["info"].stringValue
                     let address = subJson["address"].stringValue
                     
-                    let centerId = subJson["id"].intValue
+                    let centerId = subJson["user"].intValue
                     
                     if let latitude = subJson["lat"].double{
                         lat = latitude
@@ -69,20 +69,29 @@ class CentersMapVC: UIViewController {
                     
                     if lat >= -85 && lat <= 85 && lon >= -85 && lon <= 85 {
                         
-                        self.items.append(Center.init(id: centerId, name: name, info: info, address: address, latitude: lat, longitude: lon, img: img))
+                        let center = Center.init(id: centerId, name: name, info: info, address: address, latitude: lat, longitude: lon, img: img)
+                        self.items.append(center)
                         
-                        let item = Center(position: CLLocationCoordinate2DMake(lat, lon), name: name)
-                        self.clusterManager.add(item)
+//                        let item = Center(position: CLLocationCoordinate2DMake(lat, lon), name: name)
+//                        self.clusterManager.add(item)
+                        
+                        // Creates a marker in the center of the map.
+                        let marker = GMSMarker()
+                        marker.position = CLLocationCoordinate2D(latitude: lat, longitude: lon)
+                        marker.title = name
+                        marker.snippet = address
+                        marker.userData = center
+                        marker.map = self.mapView
                         
                     }
                     
                 }
                 
                 // Call cluster() after items have been added to perform the clustering and rendering on map.
-                self.clusterManager.cluster()
+//                self.clusterManager.cluster()
                 
                 // Register self to listen to both GMUClusterManagerDelegate and GMSMapViewDelegate events.
-                self.clusterManager.setDelegate(self, mapDelegate: self)
+//                self.clusterManager.setDelegate(self, mapDelegate: self)
                 
                 break
                 
@@ -138,21 +147,22 @@ class CentersMapVC: UIViewController {
         mapView.settings.compassButton = true
         mapView.settings.scrollGestures = true
         mapView.settings.zoomGestures = true
+        mapView.delegate = self
         
         
         mapView.animate(to: camera)
     }
     
-    func setupClusterMangager(){
-        
-        // Set up the cluster manager with default icon generator and renderer.
-        let iconGenerator = GMUDefaultClusterIconGenerator()
-        let algorithm = GMUNonHierarchicalDistanceBasedAlgorithm()
-        let renderer = GMUDefaultClusterRenderer(mapView: mapView, clusterIconGenerator: iconGenerator)
-        clusterManager = GMUClusterManager(map: mapView, algorithm: algorithm, renderer: renderer)
-        
-        
-    }
+//    func setupClusterMangager(){
+//
+//        // Set up the cluster manager with default icon generator and renderer.
+//        let iconGenerator = GMUDefaultClusterIconGenerator()
+//        let algorithm = GMUNonHierarchicalDistanceBasedAlgorithm()
+//        let renderer = GMUDefaultClusterRenderer(mapView: mapView, clusterIconGenerator: iconGenerator)
+//        clusterManager = GMUClusterManager(map: mapView, algorithm: algorithm, renderer: renderer)
+//
+//
+//    }
     
 }
 
@@ -200,12 +210,18 @@ extension CentersMapVC: CLLocationManagerDelegate {
     }
 }
 
-extension CentersMapVC: GMUClusterManagerDelegate, GMSMapViewDelegate{
+extension CentersMapVC: /*GMUClusterManagerDelegate,*/ GMSMapViewDelegate{
     
     
     func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
-        if let poiItem = marker.userData as? Center {
-            NSLog("Did tap marker for cluster item \(poiItem.name)")
+        if let center = marker.userData as? Center {
+            NSLog("Did tap marker for cluster item \(center.name)")
+            
+            print("centerID: \(center.id)")
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "CenterProfileVC") as! CenterProfileVC
+            vc.centerID = center.id
+            self.navigationController?.pushViewController(vc, animated: true)
+            
         } else {
             NSLog("Did tap a normal marker")
         }
@@ -213,31 +229,31 @@ extension CentersMapVC: GMUClusterManagerDelegate, GMSMapViewDelegate{
     }
     
    
-    func clusterManager(_ clusterManager: GMUClusterManager, didTap clusterItem: GMUClusterItem) -> Bool {
-        
-        print("clusetItem Clicked \(clusterItem.position.latitude)")
-        
-        if let center = clusterItem as? Center{
-            
-            // TODO: Go to center profile
-            
-            print("centerID: \(center.id)")
-            let vc = self.storyboard?.instantiateViewController(withIdentifier: "CenterProfileVC") as! CenterProfileVC
-            vc.centerID = center.id
-            self.navigationController?.pushViewController(vc, animated: true)
-        }
-        
-        
-        return true
-    }
-    
-    func clusterManager(_ clusterManager: GMUClusterManager, didTap cluster: GMUCluster) -> Bool {
-        let newCamera = GMSCameraPosition.camera(withTarget: cluster.position,
-                                                 zoom: mapView.camera.zoom + 1)
-        let update = GMSCameraUpdate.setCamera(newCamera)
-        mapView.moveCamera(update)
-        return false
-    }
+//    func clusterManager(_ clusterManager: GMUClusterManager, didTap clusterItem: GMUClusterItem) -> Bool {
+//
+//        print("clusetItem Clicked \(clusterItem.position.latitude)")
+//
+//        if let center = clusterItem as? Center{
+//
+//            // TODO: Go to center profile
+//
+//            print("centerID: \(center.id)")
+//            let vc = self.storyboard?.instantiateViewController(withIdentifier: "CenterProfileVC") as! CenterProfileVC
+//            vc.centerID = center.id
+//            self.navigationController?.pushViewController(vc, animated: true)
+//        }
+//
+//
+//        return true
+//    }
+//
+//    func clusterManager(_ clusterManager: GMUClusterManager, didTap cluster: GMUCluster) -> Bool {
+//        let newCamera = GMSCameraPosition.camera(withTarget: cluster.position,
+//                                                 zoom: mapView.camera.zoom + 1)
+//        let update = GMSCameraUpdate.setCamera(newCamera)
+//        mapView.moveCamera(update)
+//        return false
+//    }
 }
 
 

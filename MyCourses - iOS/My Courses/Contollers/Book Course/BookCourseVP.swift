@@ -28,16 +28,16 @@ class BookCourseVP: TabmanViewController, PageboyViewControllerDataSource {
 //        centerInfoTVC.center = self.center
         centerInfoTVC.info = [
             "\n\n\n",
-            "Info",
+            NSLocalizedString("info", tableName: "localized" ,comment: ""),
             self.subCourse.info,
             " ",
-            "Instructor:",
+            NSLocalizedString("instructor", tableName: "localized" ,comment: ""),
             self.subCourse.instructorName,
             " ",
-            "Starting at:",
+            NSLocalizedString("starting_at", tableName: "localized" ,comment: ""),
             self.subCourse.startingDateArrayList[0].date,
             " ",
-            "Fees:",
+            NSLocalizedString("fees", tableName: "localized" ,comment: ""),
             "\(self.subCourse.fees) L.E"
         ]
         
@@ -51,8 +51,8 @@ class BookCourseVP: TabmanViewController, PageboyViewControllerDataSource {
         self.dataSource = self
         
         self.bar.items = [
-            Item.init(title: "Book"),
-            Item.init(title: "Info")
+            Item.init(title: NSLocalizedString("book", tableName: "localized" ,comment: "")),
+            Item.init(title: NSLocalizedString("info", tableName: "localized" ,comment: ""))
         ]
         
         

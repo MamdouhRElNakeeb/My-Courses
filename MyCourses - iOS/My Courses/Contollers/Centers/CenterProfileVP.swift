@@ -26,10 +26,10 @@ class CenterProfileVP: TabmanViewController, PageboyViewControllerDataSource {
         centerInfoTVC.center = self.center
         centerInfoTVC.info = [
             "\n\n\n",
-            "Info",
+            NSLocalizedString("info", tableName: "localized" ,comment: ""),
             self.center.info,
             " ",
-            "Address",
+            NSLocalizedString("address", tableName: "localized" ,comment: ""),
             self.center.address
         ]
         
@@ -43,8 +43,8 @@ class CenterProfileVP: TabmanViewController, PageboyViewControllerDataSource {
         self.dataSource = self
         
         self.bar.items = [
-            Item.init(title: "Courses"),
-            Item.init(title: "Info")
+            Item.init(title: NSLocalizedString("courses", tableName: "localized" ,comment: "")),
+            Item.init(title: NSLocalizedString("info", tableName: "localized" ,comment: ""))
         ]
         
         

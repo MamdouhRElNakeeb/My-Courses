@@ -119,7 +119,7 @@ class BookingsTVC: UITableViewController {
         cell.centerName.text = items[indexPath.row].centerName
         cell.courseName.text = items[indexPath.row].courseName
         cell.courseDate.text = items[indexPath.row].startDate
-        cell.img.sd_setImage(with: URL(string: items[indexPath.row].courseImage), placeholderImage: UIImage(named: "books_bg"))
+        cell.img.sd_setImage(with: URL(string: Consts.SERVER +  items[indexPath.row].courseImage), placeholderImage: UIImage(named: "books_bg"))
         
         cell.removeBtn.tag = indexPath.row
         cell.removeBtn.addTarget(self, action: #selector(cancelBooking(_:)), for: .touchUpInside)

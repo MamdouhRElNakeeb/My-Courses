@@ -68,35 +68,64 @@ class BookCourseTVC: UITableViewController {
         
     }
 
+    struct JSONStringArrayEncoding: ParameterEncoding {
+        private let myString: String
+        
+        init(string: String) {
+            self.myString = string
+        }
+        
+        func encode(_ urlRequest: URLRequestConvertible, with parameters: Parameters?) throws -> URLRequest {
+            var urlRequest = urlRequest.urlRequest
+            
+            let data = myString.data(using: .utf8)!
+            
+            if urlRequest?.value(forHTTPHeaderField: "Content-Type") == nil {
+                urlRequest?.setValue("application/json", forHTTPHeaderField: "Content-Type")
+            }
+            
+            urlRequest?.httpBody = data
+            
+            return urlRequest!
+        }
+        
+    }
+    
     @IBAction func bookNowOnClick(_ sender: Any) {
+        
+        guard let ind = datesDropDown.indexForSelectedRow else{
+          
+            let alert = UIAlertController(title: "Error", message: "Please select starting date", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Try again", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
         
         let url = Consts.BOOKING + "\(UserDefaults.standard.integer(forKey: "id"))/"
         print(url)
         
-        var params: Parameters = [
-            "subCourse": subCourse.subCourseID,
-            "startingDate": datesDropDown.selectedItem ?? "",
-            "promoCode": ""
-        ]
-        
+        var promoCode = "\"\""
         if discount != 0{
             let codeID = promoCodes[promoCodesDropDown.indexForSelectedRow!].id
-            params.updateValue(codeID, forKey: "promoCode")
+            promoCode = "\(codeID)"
+            print("promoCodeFound: \(codeID)")
         }
         
-        print(params)
+        var request = URLRequest(url: URL(string: url)!)
+        request.httpMethod = HTTPMethod.post.rawValue
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         
-        let headers: HTTPHeaders = [
-            "Accept": "application/json",
-            "Content-Type" :"application/json"
-        ]
+        let postString = "{\"subCourse\":\(subCourse.subCourseID), \"promoCode\":\(promoCode), \"startingDate\":\"\(datesDropDown.selectedItem!)\"}"
         
-        Alamofire.request(url, method: .post, parameters: params)
-            .responseJSON{
+        print(postString)
+        
+        request.httpBody = postString.data(using: .utf8)
+        
+        Alamofire.request(request).responseJSON { (response) in
             
-            response in
+            
             print(response)
-            
+
             switch response.result{
             case .success(let value):
                 let json = JSON(value)
@@ -107,8 +136,8 @@ class BookCourseTVC: UITableViewController {
                 if success{
                     print("booked")
                     
-                    let alert = UIAlertController(title: "Error", message: "Course is booked successfully", preferredStyle: UIAlertControllerStyle.alert)
-                    alert.addAction(UIAlertAction(title: "Try again", style: UIAlertActionStyle.default, handler: {
+                    let alert = UIAlertController(title: "Success", message: "Course is booked successfully", preferredStyle: UIAlertControllerStyle.alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: {
                         
                         (action) in
                         
@@ -127,7 +156,7 @@ class BookCourseTVC: UITableViewController {
                     self.present(alert, animated: true, completion: nil)
                     return
                 }
-            
+                
                 if let errors = json["errors"].string{
                     let alert = UIAlertController(title: "Error", message: errors, preferredStyle: UIAlertControllerStyle.alert)
                     alert.addAction(UIAlertAction(title: "Try again", style: UIAlertActionStyle.default, handler: nil))
@@ -141,6 +170,7 @@ class BookCourseTVC: UITableViewController {
                 print(error)
                 break
             }
+            
         }
         
     }
@@ -195,6 +225,7 @@ class BookCourseTVC: UITableViewController {
     func getUserPromo(){
         
         let url = Consts.PROMO_USER + "\(UserDefaults.standard.integer(forKey: "id"))/"
+        
         Alamofire.request(url).responseJSON{
             
             response in
