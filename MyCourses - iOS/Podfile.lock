@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (4.6.0)
+  - AutoInsetter (1.2.1)
   - Bolts (1.9.0):
     - Bolts/AppLinks (= 1.9.0)
     - Bolts/Tasks (= 1.9.0)
@@ -76,13 +77,17 @@ PODS:
   - libwebp/utils (0.6.0):
     - libwebp/core
   - libwebp/webp (0.6.0)
-  - Parchment (1.0.3)
+  - Pageboy (2.4.0)
+  - QRCodeReader.swift (8.1.1)
   - SDWebImage/Core (3.8.2)
   - SDWebImage/WebP (3.8.2):
     - libwebp
     - SDWebImage/Core
   - SideMenuController (0.2.4)
   - SwiftyJSON (4.0.0)
+  - Tabman (1.6.0):
+    - AutoInsetter (~> 1.2.0)
+    - Pageboy (~> 2.4.0)
   - TwitterCore (3.1.0)
   - TwitterKit (3.3.0):
     - TwitterCore (>= 3.1.0)
@@ -96,14 +101,17 @@ DEPENDENCIES:
   - FSPagerView
   - GoogleMaps
   - GoogleSignIn
-  - Parchment
+  - Pageboy
+  - QRCodeReader.swift (~> 8.1.1)
   - SDWebImage/WebP (~> 3.8)
   - SideMenuController
   - SwiftyJSON
+  - Tabman
   - TwitterKit
 
 SPEC CHECKSUMS:
   Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
+  AutoInsetter: d90171b54341b801edd4ab68eee9eec54fdc92b7
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
   DropDown: 20499c7b2731b0d21609af924e47c7677a2be50d
   FacebookCore: 3ffa190a3f1f96cec0e44d3fc221bc322c595ffa
@@ -119,13 +127,15 @@ SPEC CHECKSUMS:
   GTMOAuth2: c77fe325e4acd453837e72d91e3b5f13116857b2
   GTMSessionFetcher: 390ea358e5a0d0133153806f744662dad933d06b
   libwebp: 1d5a07c2eb97f9c31bd5f154bb82efc0ea67c6a2
-  Parchment: 964ae2fa48431d87148c3bb37f0b9c86c7ceee4b
+  Pageboy: b04cee5c1315a865fb49321129d12635e8465144
+  QRCodeReader.swift: b164a681887de276d405ff02bce854d82cd6360b
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
   SideMenuController: b463d2b3aa58e2afe57f57a07938fa9a647894ca
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
+  Tabman: a9be97d1c75b4b7f40eec416021f614c4ccbb670
   TwitterCore: 644d59e75abccb26cf0a9050d2c4dea0e5412241
   TwitterKit: a2e60ddcedbf54091eac6f27685ca7a87681e1d7
 
-PODFILE CHECKSUM: 2e2c7dca387e0baa789f785c283bf62e8bde0c03
+PODFILE CHECKSUM: 07cdc575cae7b7141e5642cf566414fc5e343933
 
 COCOAPODS: 1.3.1

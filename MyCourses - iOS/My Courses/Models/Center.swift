@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import GoogleMaps
 
-class Center: NSObject, GMUClusterItem{
+class Center: NSObject /*,GMUClusterItem*/{
     
     var id = 0
     var name = ""
@@ -25,6 +25,7 @@ class Center: NSObject, GMUClusterItem{
         
         self.id = id
         self.name = name
+        self.info = info
         self.address = address
         self.latitude = latitude
         self.longitude = longitude
@@ -32,8 +33,11 @@ class Center: NSObject, GMUClusterItem{
         
     }
 
-    init(position: CLLocationCoordinate2D, name: String) {
-        self.position = position
-        self.name = name
-    }
+//    init(position: CLLocationCoordinate2D, name: String) {
+//        self.position = position
+//        self.name = name
+//    }
+    
+    override init() {}
+    
 }

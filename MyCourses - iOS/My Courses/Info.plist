@@ -17,30 +17,35 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
+	<string>1.1</string>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>fb2038579076385900</string>
+				<string>twitterkit-vf0zpRD0apGzKvDUg5GZa7FYK</string>
 			</array>
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>2</string>
 	<key>FacebookAppID</key>
 	<string>2038579076385900</string>
 	<key>FacebookDisplayName</key>
 	<string>My Courses</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
+		<string>twitter</string>
+		<string>twitterauth</string>
 		<string>comgooglemaps</string>
 		<string>googlechromes</string>
 		<string>fbapi</string>
 		<string>fb-messenger-api</string>
 		<string>fbauth2</string>
 		<string>fbshareextension</string>
+		<string>fb</string>
+		<string>instagram</string>
 	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
@@ -49,6 +54,8 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>The camera is needed to scan QR codes</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
 	<string>My Courses Need to get your location to show you the near centers</string>
 	<key>NSLocationWhenInUseUsageDescription</key>

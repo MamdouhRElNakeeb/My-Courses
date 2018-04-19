@@ -5,3 +5,9 @@ MyCourses - Android/.idea/modules.xml
 MyCourses - Android/.idea/misc.xml
 MyCourses - Android/.idea/runConfigurations.xml
 MyCourses - Android/.idea/kotlinc.xml
+MyCourses - iOS/My Courses/Helper/Google-Maps-iOS-Utils/
+MyCourses - iOS/Pods/
+*.apk
+MyCourses - Android/app/release/output.json
+MyCourses - Android/app/src/androidTest/java/com/mycoursesapp/ExampleInstrumentedTest.java
+MyCourses - i OS222/

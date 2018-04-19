@@ -24,4 +24,5 @@ class Course {
         self.img = img        
     }
     
+    init() {}
 }
